@@ -1,6 +1,6 @@
 # Mission
 
-High-Five (name pending) is a web application catering to young black and brown users. The mission is to make extracurricular (specifically non-profit) organizations and programs more accessible and reachable to the youth. A user can search from our database for programs/companies providing technology support, youth programming, after-school programs, summer-school programs, internships, etc.
+Team High-Five is a web application catering to young black and brown users. The mission is to make extracurricular (specifically non-profit) organizations and programs more accessible and reachable to the youth. A user can search from our database for programs/companies providing technology support, youth programming, after-school programs, summer-school programs, internships, etc.
 
 ## Proof of Concept
 
