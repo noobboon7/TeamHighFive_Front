@@ -23,4 +23,6 @@ Chloe wants to find a summer activity before school lets out in a couple of week
 
 Richard learns the Summer Youth Employment Program (SYEP) has been suspended due to COVID-19 social distancing guidelines. He is interested in finding employment by way of internships in his neighborhood to work on projects that help him grow and gain a new skill in the tech industry during the summer. He can go onto our site and filter Internship Opportunities by date for the perfect matches to apply for.
 
+## API
+
 [Team High Five API](https://github.com/noobboon7/TeamHighFive_api_v1)
