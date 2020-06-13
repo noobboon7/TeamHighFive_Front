@@ -5,3 +5,4 @@ const Footer = styled.div`
   background-color: #1a0000;
 `;
 export default Footer;
+//Changes
