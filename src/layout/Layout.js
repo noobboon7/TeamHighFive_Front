@@ -1,5 +1,6 @@
 import React from "react";
-import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown, Row } from "react-bootstrap";
+import Footer from "../styled-components/Footer";
 
 const Layout = ({ children }) => (
   <div>
@@ -31,7 +32,14 @@ const Layout = ({ children }) => (
       </Navbar.Collapse>
     </Navbar>
     {children}
-    <footer></footer>
+    <Footer>
+      <Row bg="dark">
+        <div>&copy; High-Five</div>
+      </Row>
+      <Row>
+        <div>About</div>
+      </Row>
+    </Footer>
   </div>
 );
 

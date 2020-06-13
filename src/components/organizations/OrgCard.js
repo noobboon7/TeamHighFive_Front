@@ -2,8 +2,15 @@ import React from "react";
 import { Col, Card, ListGroup, ListGroupItem } from "react-bootstrap";
 
 const OrgCard = (props) => (
-  <Col>
-    <Card style={{ width: "18rem" }}>
+  <Col lg={4} sm={6}>
+    <Card
+      style={{
+        width: "18rem",
+        justifyContent: "space-around",
+        alignContent: "center",
+        margin: "5vh",
+      }}
+    >
       <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
       <Card.Body>
         <Card.Title>Card Title</Card.Title>
