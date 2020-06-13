@@ -1,32 +1,25 @@
 import React from "react";
-import { Col, Card, ListGroup, ListGroupItem } from "react-bootstrap";
+import { Col, Card } from "react-bootstrap";
+import styles from "./OrgCard.module.css";
 
-const OrgCard = (props) => (
+const OrgCard = ({ organization }) => (
   <Col lg={4} sm={6}>
     <Card
       style={{
         width: "18rem",
+        height: "16rem",
         justifyContent: "space-around",
         alignContent: "center",
         margin: "5vh",
       }}
     >
-      <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+      <Card.Img className={styles.img} variant="top" src={organization.logo} />
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
+        <Card.Title>{organization.name}</Card.Title>
+        <Card.Text>{organization.description}</Card.Text>
       </Card.Body>
-      <ListGroup className="list-group-flush">
-        <ListGroupItem>Cras justo odio</ListGroupItem>
-        <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-        <ListGroupItem>Vestibulum at eros</ListGroupItem>
-      </ListGroup>
       <Card.Body>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+        <Card.Link href="#">{organization.url}</Card.Link>
       </Card.Body>
     </Card>
   </Col>

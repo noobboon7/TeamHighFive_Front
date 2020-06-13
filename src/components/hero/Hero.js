@@ -1,6 +1,11 @@
 import React from "react";
-import Carousel from "./ControlledCarousel";
+import styles from "./Hero.module.css";
+import SearchBars from "../searchbars/SearchBars";
 
-const Hero = () => <Carousel />;
+const Hero = () => (
+  <div className={styles.heroStyles}>
+    <SearchBars />
+  </div>
+);
 
 export default Hero;
