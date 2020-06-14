@@ -81,51 +81,45 @@
 
 
 
-.connectionDiv{
-  padding:50px;
-  margin: 20px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.connectionDiv {
   background-image: url('./static/map.png');
 }
 
-.connect-head-div{
-  width: 100%;
-  color: #ffc222;
-  display: flex;
-  justify-content: center;
+.connectBtn {
+  border-radius: 3em;
+  padding: .5em 2em;
+  font-weight: 500;
 }
-
-.connect-title-div{
-  width: 100%;
+.connectBtnSolid {
+  background-color: var(--color-blue-green);
+  border: 1px solid var(--light);
   color: white;
-  display: flex;
-  justify-content: center;
 }
 
-.connectBtn{
-  margin-right: 50px;
-  background-color:#42C3D3;
+.connectBtnSolid:hover{
+  background-color: var(--white);
   border-style: solid;
-  border-color: #42C3D3;
-  color: white;
-  border-radius: 50px;
-  padding:10px;
-  padding-left: 30px;
-  padding-right: 30px;
+  border-color: var(--color-blue-green);
+  color: var(--color-blue-green);
 }
 
-.connectBtn:hover{
-  margin-right: 50px;
-  background-color:white;
-  border-style: solid;
-  border-color: #42C3D3;
-  color: #42C3D3;
-  border-radius: 50px;
-  padding:10px;
-  padding-left: 30px;
-  padding-right: 30px;
+.connection-counter-wrapper .counter-icon {
+  color: var(--color-blue-green);
+  font-size: 3em;
+}
+
+.connection-counter-wrapper .counter-number {
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.connection-counter-wrapper .counter-label {
+  font-size: 1em;
+  text-transform: uppercase;
+}
+.connection-counter-wrapper .counter-label span {
+  display: block;
+  color: var(--color-blue-green);
 }
 
 /* blue #42C3D3 */
