@@ -71,6 +71,10 @@ nav .navbar-nav .social-media a {
   color: var(--color-yellow);
 }
 
+/* NOTE: Card Styles */
+.card .card-footer.social-media {
+  font-size: 1.55rem;
+}
 /* NOTE: Custom Footer styles */
 #footer {
   background-color: var(--color-blue-green);

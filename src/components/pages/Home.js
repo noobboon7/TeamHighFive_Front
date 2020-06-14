@@ -5,12 +5,12 @@ import OrganizationList from "../organizations/OrganizationList";
 import WordAboutUs from "../home/WordAboutUs";
 import Connections from "../home/Connections";
 
-const Home = ({ organizations_array }) => (
+const Home = ({ prgArray }) => (
   <div>
-    <Hero organizations_array={organizations_array} />
+    <Hero prgArr={prgArray} />
+    <OrganizationList prgArr={prgArray} />
     <WordAboutUs/>
     <Connections/>
-    <OrganizationList organizations_array={organizations_array} />
   </div>
 );
 

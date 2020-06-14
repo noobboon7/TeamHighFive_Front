@@ -63,23 +63,20 @@
 }
 
 .wordBtn{
-  margin-right: 50px;
-  background-color:white;
-  border-style: solid;
-  border-color: #ffc222;
-  color: #ffc222;
-  border-radius: 50px;
-  padding:10px;
+  border-radius: 3em;
+  padding: 1em;
 }
 
-.wordBtn:hover{
-  margin-right: 50px;
-  background-color:#ffc222;
-  border-style: solid;
-  border-color: #ffc222;
-  color: white;
-  border-radius: 50px;
-  padding:10px;
+.wordBtnSolid, .wordBtnOutline:hover {
+  background-color: var(--color-yellow);
+  border: 2px solid var(--light);
+  color: var(--white);
+}
+
+.wordBtnSolid:hover, .wordBtnOutline {
+  background-color: var(--white);
+  border: 2px solid var(--color-yellow);
+  color: var(--color-yellow);
 }
 
 

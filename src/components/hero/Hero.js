@@ -11,7 +11,9 @@ const Hero = ({ organizations_array }) => (
 export default Hero;
 
 /*
-app -> home -> hero -> searchBars
-\
-Results
-*/
+                            [orgArr]
+app ----> home -> hero -> searchBars -> filter components 
+
+                            Results
+                            [filtered Array]
+*/                  
