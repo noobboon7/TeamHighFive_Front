@@ -1,8 +1,7 @@
 import React from "react";
 import OrgCard from "./OrgCard";
-import { organizations } from "../../data/organizations";
 
-const OrganizationList = () =>
+const OrganizationList = ({ organizations }) =>
   organizations.map((organization) => <OrgCard organization={organization} />);
 
 export default OrganizationList;
