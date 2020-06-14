@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Banner from "../banner/Banner";
 import { Row, Col } from "react-bootstrap";
+import PlaceHolderLogo from "../../static/organization-placeholder.png";
 
 const ShowPage = (props) => {
   const [organization, setOrganization] = useState({});
@@ -41,11 +42,12 @@ const ShowPage = (props) => {
     <div>
       <Banner name={organization.name} />
       <div className="container mt-5">
-        <Row>
+        <Row className="mb-5">
           <Col md="4">
-          <p>organization logo</p>
+          <img src={organization.logo == null ? PlaceHolderLogo : organization.logo } alt={organization.name} className="img-fluid"></img>
+          <p>{console.log("organization",organization)}</p>
           </Col>
-          <Col md="6">
+          <Col md="6" className="bg-white px-5 py-3">
           <h1>{organization.name}</h1>
           <p>{organization.description}</p>
           </Col>
