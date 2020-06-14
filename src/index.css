@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css');
 
 :root {
+  --color-off-white: #f4f6fb;
   --color-black: #A0A6B2;
   --color-yellow: #FFC222;
   --color-blue-green: #42C3D3;
 }
 
 body {
+  background-color: var(--color-off-white) !important;
   margin: 0;
   /* font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; */
@@ -14,17 +18,34 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 body a,
 body a:hover {
   text-decoration: none;
 }
+
+/* Navbar Styles */
+nav.navbar {
+  background-color: var(--white);
+}
+.navbar-brand .logo {
+  width: 100px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.icon {
+/* .icon {
   color: var(--color-blue-green);
+} */
+
+.intro-lead {
+  color: var(--color-yellow);
+  text-transform: uppercase;
+  font-size: .8rem;
 }
+
 /* NOTE: Custom Navbar styles */
 nav {
   font-size: 0.8rem;

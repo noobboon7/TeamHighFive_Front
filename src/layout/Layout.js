@@ -4,9 +4,13 @@ import { Navbar, Nav, Container, Row, Col } from "react-bootstrap";
 import Footer from "../styled-components/Footer";
 import styles from "./Layout.module.css";
 import Logo from "../static/youth_connection_logo.jpg";
+import NYCCodersLogo from "../static/nyc_coder.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const Layout = ({ children }) => (
   <div>
@@ -29,9 +33,13 @@ const Layout = ({ children }) => (
             <li class="list-inline-item"><Link to="#">Add an Organization</Link></li>
             <li class="list-inline-item"><Link to="/contact">Contact</Link></li>
           </ul>
-          <ul className="list-inline m-0 text-uppercase">
-            <li class="list-inline-item"><Link href="#">
-            <FontAwesomeIcon icon={faUser} className="mr-2 icons" /> Organization Login</Link></li>
+          <ul className="list-inline m-0 text-uppercase social-media">
+            <li class="list-inline-item"><Link href="#" className="m-0">
+            <FontAwesomeIcon icon={faFacebook} className="m-0" /></Link></li>
+            <li class="list-inline-item"><Link href="#" className="m-0">
+            <FontAwesomeIcon icon={faTwitter} className="m-0" /></Link></li>
+            <li class="list-inline-item"><Link href="#" className="m-0">
+            <FontAwesomeIcon icon={faInstagram} className="m-0" /></Link></li>
           </ul>
         </Nav>
       </Navbar.Collapse>
@@ -39,12 +47,21 @@ const Layout = ({ children }) => (
     {children}
     <Footer id="footer" className="py-3 mt-3">
       <Container className="container-fluid">
-        <Row>
+        <Row className="align-items-center">
           <Col md="4">
             <p>&copy; Youth Connnection</p>
           </Col>
           <Col md="4">
-            <p>Logos</p>
+            <Row className="text-center">
+              <Col md="4">
+              <img className="img-fluid mx-auto mb-2" src={Logo}></img>
+              <h6>Youth Connnection</h6>
+              </Col>
+              <Col md="4">
+              <img className="img-fluid mx-auto mb-2" src={NYCCodersLogo}></img>
+              <h6>NYC Coders</h6>
+              </Col>
+            </Row>
           </Col>
           <Col md="4">
             <ul class="list-unstyled">

@@ -10,3 +10,8 @@ const Hero = ({ organizations_array }) => (
 
 export default Hero;
 
+/*
+app -> home -> hero -> searchBars
+\
+Results
+*/
