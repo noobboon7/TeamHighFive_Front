@@ -36,3 +36,46 @@
     transform: rotate(360deg);
   }
 }
+
+/* yellow #ffc222 */
+
+
+.wordDiv{
+  padding:50px;
+  margin: 20px;
+  display: flex;
+  background-color: white;
+
+}
+
+.head{
+  color:#ffc222;
+}
+
+.wordDescription{
+  color: #999;
+}
+
+.buttonDiv{
+  display:flex;
+}
+
+.wordBtn{
+  margin-right: 50px;
+  background-color:white;
+  border-style: solid;
+  border-color: #ffc222;
+  color: #ffc222;
+  border-radius: 50px;
+  padding:10px;
+}
+
+.wordBtn:hover{
+  margin-right: 50px;
+  background-color:#ffc222;
+  border-style: solid;
+  border-color: #ffc222;
+  color: white;
+  border-radius: 50px;
+  padding:10px;
+}
