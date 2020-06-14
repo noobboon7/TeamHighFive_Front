@@ -1,4 +1,4 @@
-export const categories = [
+const categories = [
   "religious activities",
   "schools, colleges, and related activities",
   "cultural, historical, or other educational activities",
@@ -23,3 +23,4 @@ export const categories = [
   "internship",
   "scholarship",
 ];
+export default categories; 

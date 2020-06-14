@@ -9,12 +9,7 @@ import styles from "./SearchBars.module.css";
 
 const SearchLocation = () => (
   <InputGroup>
-    <FormControl
-      placeholder="Recipient's username"
-      aria-label="Recipient's username"
-      aria-describedby="basic-addon2"
-    />
-
+    
     <DropdownButton
       as={InputGroup.Append}
       variant="info"
