@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Navbar, Nav, Container, Row, Col } from "react-bootstrap";
 import Footer from "../styled-components/Footer";
 import styles from "./Layout.module.css";
-import Logo from "../static/youth_connection_logo.jpg";
+import Logo from "../static/youth_connection_logo.png";
 import NYCCodersLogo from "../static/nyc_coder.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
