@@ -27,11 +27,18 @@ const ShowPage = (props) => {
   let programs = organization.programs;
   let lis = programs ? (
     programs.map((program) => (
-      <Col>
+      <Col md="4">
         <div
           key={program.id}
         >
-          <h3>{program.name}</h3>
+          <h4 className="display-6">{program.name}</h4>
+          <ul className="list-unstyled">
+            <li>{program.age_group}</li>
+            <li>{program.duration}</li>
+            <li>{program.hours}</li>
+            <li><a className="btn btn-warning" href={program.program_url} target="_blank">Learn more</a></li>
+            <li>{program.start_season}</li>
+          </ul>
         </div>
       </Col>
     ))
