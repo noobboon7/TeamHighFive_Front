@@ -123,3 +123,26 @@
 }
 
 /* blue #42C3D3 */
+
+
+.counterDiv{
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.data-div{
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px;
+  text-align: center;
+}
+
+.btnDiv{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+

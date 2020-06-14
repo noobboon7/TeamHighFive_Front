@@ -2,9 +2,9 @@ import React from "react";
 
 import OrganizationsList from "../organizations/OrganizationList";
 
-const Results = ({ organizations }) => (
+const Results = ({ prgArray }) => (
   <div>
-    <OrganizationsList organizations={organizations} />
+    <OrganizationsList prgArr={prgArray} />
   </div>
 );
 

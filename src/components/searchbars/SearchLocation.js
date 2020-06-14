@@ -1,28 +1,37 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   InputGroup,
   FormControl,
   Dropdown,
   DropdownButton,
 } from "react-bootstrap";
-import styles from "./SearchBars.module.css";
 
-const SearchLocation = () => (
-  <InputGroup>
-    
-    <DropdownButton
-      as={InputGroup.Append}
-      variant="info"
-      title="Dropdown"
-      id="input-group-dropdown-2"
-    >
-      <Dropdown.Item href="#">Action</Dropdown.Item>
-      <Dropdown.Item href="#">Another action</Dropdown.Item>
-      <Dropdown.Item href="#">Something else here</Dropdown.Item>
-      <Dropdown.Divider />
-      <Dropdown.Item href="#">Separated link</Dropdown.Item>
-    </DropdownButton>
-  </InputGroup>
-);
+const SearchLocation = ({prgArr}) => {
+  const [location, setLocation] = useState('Location');
+  const parseLocation = () => {
+    let locations = prgArr.map(program => program.location);
+    locations = new Set(locations)
+    locations = Array.from(locations)
+    return locations;
+  };
+  return(
+      <InputGroup>
+      <DropdownButton
+        onSelect={(e) => setLocation(e)}
+        as={InputGroup.Append}
+        variant="info"
+        title={location}
+        id="input-group-dropdown-2"
+      >
+        {parseLocation().map((local, idx) => (
+          <Dropdown.Item eventKey={local} key={idx}>
+            {local}
+          </Dropdown.Item>
+        ))}
+      </DropdownButton>
+        
+    </InputGroup>
+  )
+};
 
 export default SearchLocation;

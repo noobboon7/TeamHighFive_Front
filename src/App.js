@@ -11,6 +11,7 @@ import "./App.css";
 
 function App() {
 	const [programs, setPrograms] = useState([]);
+
 	useEffect(() => {
 		if (programs.length === 0) {
 			fetch("https://connection-youth.herokuapp.com/programs")
@@ -27,7 +28,7 @@ function App() {
 				<Route
 					exact
 					path='/'
-					render={(routerProps) => <Home prgArray={programs} />}
+					render={(routerProps) => <Home programArray={programs} />}
 				/>
 				<Route exact path='/about' render={(routerProps) => <About />} />
 				<Route exact path='/contact' render={(routerProps) => <Contact />} />
