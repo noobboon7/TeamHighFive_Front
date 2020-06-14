@@ -29,18 +29,6 @@ const ShowPage = (props) => {
       <Col>
         <div
           key={program.id}
-          // style={{
-          //   flexDirection: "column",
-          //   flexWrap: "wrap",
-          //   backgroundColor: "grey",
-          //   height: "16em",
-          //   width: "18em",
-          //   color: "white",
-          //   justifyContent: "center",
-          //   textAlign: "center",
-          //   padding: "5px",
-          //   margin: "5px",
-          // }}
         >
           <h3>{program.name}</h3>
         </div>
