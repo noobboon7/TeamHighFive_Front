@@ -4,12 +4,11 @@ import Hero from "../hero/Hero";
 import OrganizationList from "../organizations/OrganizationList";
 import WordAboutUs from "../home/WordAboutUs";
 
-const Home = ({ prgArray }) => (
+const Home = ({ programArray }) => (
   <div>
-    <Hero prgArr={prgArray} />
-    <OrganizationList prgArr={prgArray} />
+    <Hero prgArr={programArray} />
+    <OrganizationList prgArr={programArray} />
     <WordAboutUs/>
-
   </div>
 );
 
