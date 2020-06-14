@@ -1,10 +1,12 @@
 import React from "react";
 
 import Hero from "../hero/Hero";
+import OrganizationList from "../organizations/OrganizationList";
 
-const Home = () => (
+const Home = ({ organizations_array }) => (
   <div>
-    <Hero />
+    <Hero organizations_array={organizations_array} />
+    <OrganizationList organizations_array={organizations_array} />
   </div>
 );
 

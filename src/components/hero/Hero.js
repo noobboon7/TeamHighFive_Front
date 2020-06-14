@@ -2,9 +2,9 @@ import React from "react";
 import styles from "./Hero.module.css";
 import SearchBars from "../searchbars/SearchBars";
 
-const Hero = () => (
+const Hero = ({ organizations_array }) => (
   <div className={styles.heroStyles}>
-    <SearchBars />
+    <SearchBars organizations_array={organizations_array} />
   </div>
 );
 
