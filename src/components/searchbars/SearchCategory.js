@@ -8,7 +8,7 @@ import {
 } from "react-bootstrap";
 
 const sortByLetter = (typeCategory) => {
-  
+
 }
 
 const SearchCategory = () => (

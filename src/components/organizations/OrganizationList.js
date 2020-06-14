@@ -1,11 +1,11 @@
 import React from "react";
 import OrgCard from "./OrgCard";
 
-const OrganizationList = ({organizations_array}) => ( 
+const OrganizationList = ({prgArr}) => ( 
   <div className="container mt-5" >
     <div className="row"> 
-      {organizations_array.map((organization, idx) => ( 
-        <OrgCard key={idx} organization = {organization}/>
+      {prgArr.map((program, idx) => ( 
+        <OrgCard key={idx} program = {program}/>
         ))
       } 
     </div>

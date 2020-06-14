@@ -3,10 +3,10 @@ import React from "react";
 import Hero from "../hero/Hero";
 import OrganizationList from "../organizations/OrganizationList";
 
-const Home = ({ organizations_array }) => (
+const Home = ({ prgArray }) => (
   <div>
-    <Hero organizations_array={organizations_array} />
-    <OrganizationList organizations_array={organizations_array} />
+    <Hero prgArr={prgArray} />
+    <OrganizationList prgArr={prgArray} />
   </div>
 );
 
