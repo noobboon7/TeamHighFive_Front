@@ -1,7 +1,9 @@
 import React from "react";
+
+
 import {Col,Card, Button} from "react-bootstrap";
-// import styles from "./OrgCard.module.css";
 import {Link} from 'react-router-dom'
+
 
 //add color "info" to button and height
 const OrgCard = ({program}) => {
@@ -10,6 +12,7 @@ const OrgCard = ({program}) => {
     newString = newString.join(" ");
     return newString + "...";
   }
+
 
 
   return ( 
