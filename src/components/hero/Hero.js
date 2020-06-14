@@ -2,16 +2,16 @@ import React from "react";
 import styles from "./Hero.module.css";
 import SearchBars from "../searchbars/SearchBars";
 
-const Hero = ({ organizations_array }) => (
+const Hero = ({ prgArr }) => (
   <div id={styles.heroStyles} className="d-flex justify-content-center align-items-center">
-    <SearchBars organizations_array={organizations_array}/>
+    <SearchBars prgArr={prgArr}/>
   </div>
 );
 
 export default Hero;
 
 /*
-                            [orgArr]
+                          [prgArr]
 app ----> home -> hero -> searchBars -> filter components 
 
                             Results
