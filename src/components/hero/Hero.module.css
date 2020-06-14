@@ -1,13 +1,13 @@
-.heroStyles {
-  display: flex;
+#heroStyles {
+  /* display: flex;
   align-items: center;
-  justify-content: center;
-  height: 85vh;
-  width: 100vw;
+  justify-content: center; */
+  height: 60vh;
+  width: 100%;
   background-image: linear-gradient(
       to bottom,
-      rgba(245, 246, 252, 0.52),
-      rgba(117, 19, 93, 0.73)
+      rgba(0, 0, 0, 0.52),
+      rgba(0, 0, 0, 0.73)
     ),
     url("../../static/youth_connection_small.jpg");
   background-size: cover;
