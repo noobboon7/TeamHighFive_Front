@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Navbar, Nav, Container, Row, Col } from "react-bootstrap";
 import Footer from "../styled-components/Footer";
 import styles from "./Layout.module.css";
-import Logo from "../static/youth_connection_logo.jpg";
+import Logo from "../static/youth_connection_logo.png";
 import NYCCodersLogo from "../static/nyc_coder.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -20,19 +20,20 @@ const Layout = ({ children }) => (
       sticky="top"
       className="custom-navbar"
     >
-      <Navbar.Brand href="#home">
+      <Navbar.Brand a href="/">
         <img className="logo img-fluid" src={Logo}></img>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="navbarNav">
         <Nav className="d-flex justify-content-around  w-100">
           <ul className="list-inline m-0 text-uppercase">
-            <li className="list-inline-item"><Link to="/">Home</Link></li>
-            <li className="list-inline-item"><Link to="/about">About</Link></li>
-            <li className="list-inline-item"><Link to="/howItWorks">How it Works</Link></li>
-            <li className="list-inline-item"><a href="https://docs.google.com/forms/d/e/1FAIpQLSeMyLoUKIEGO9U94nz1zI8qX-G46YYd8jfr60AarUC4_V4FbA/viewform">Add an Organization</a></li>
-            {/* <li className="list-inline-item"><Link to="https://docs.google.com/forms/d/e/1FAIpQLSeMyLoUKIEGO9U94nz1zI8qX-G46YYd8jfr60AarUC4_V4FbA/viewform">Add an Organization</Link></li> */}
-            <li className="list-inline-item"><Link to="/contact">Contact</Link></li>
+
+            <li class="list-inline-item"><Link to="/">Home</Link></li>
+            <li class="list-inline-item"><Link to="/about">About</Link></li>
+            <li class="list-inline-item"><Link to="/howItWorks">How it Works</Link></li>
+            <li class="list-inline-item"><a href="https://docs.google.com/forms/d/e/1FAIpQLSeMyLoUKIEGO9U94nz1zI8qX-G46YYd8jfr60AarUC4_V4FbA/viewform">Add an Organization</a></li>
+            <li class="list-inline-item"><Link to="/contact">Contact</Link></li>
+
           </ul>
           <ul className="list-inline m-0 text-uppercase social-media">
             <li className="list-inline-item"><Link href="#" className="m-0">

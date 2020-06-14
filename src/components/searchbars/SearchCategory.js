@@ -1,5 +1,4 @@
-import React from "react";
-import categories from '../../data/categories'
+import React, {useState} from "react";
 import {
   InputGroup,
   FormControl,
@@ -7,23 +6,28 @@ import {
   DropdownButton,
 } from "react-bootstrap";
 
-const sortByLetter = (typeCategory) => {
-
-}
-
-const SearchCategory = () => (
-	<InputGroup>
-		<DropdownButton
-			as={InputGroup.Append}
-			variant='info'
-			title='Categories'
-			id='input-group-dropdown-2'>
-			{/* //had an href attribute for each dropDown Item */}
-			{categories.map((category, idx) => (
-				<Dropdown.Item key={idx}>{category}</Dropdown.Item>
-			))}
-		</DropdownButton>
-	</InputGroup>
-);
+const SearchCategory = ({prgArr}) => {
+	const [categoryChoice, setCategoryChoice] = useState('Categories');
+	const parseCurrentAvaliableCategories = () => {
+		let categoriesArr = prgArr.map(program => program.categories);
+		categoriesArr = categoriesArr.flat();
+		categoriesArr = new Set(categoriesArr);
+		return Array.from(categoriesArr);
+	};
+	return(
+		<InputGroup>
+			<DropdownButton
+				onSelect={(e) => setCategoryChoice(e)}
+				as={InputGroup.Append}
+				variant='info'
+				title={categoryChoice}
+				id='input-group-dropdown-2'>
+				{parseCurrentAvaliableCategories().map((program, idx) => (
+					<Dropdown.Item eventKey={program} key={idx}>{program}</Dropdown.Item>
+					))}
+			</DropdownButton>
+		</InputGroup>
+	)
+};
 
 export default SearchCategory;

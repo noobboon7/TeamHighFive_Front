@@ -3,14 +3,14 @@ import React from "react";
 import Hero from "../hero/Hero";
 import OrganizationList from "../organizations/OrganizationList";
 import WordAboutUs from "../home/WordAboutUs";
-import Connections from "../home/Connections";
+// import Connections from "../home/Connections";
 
-const Home = ({ prgArray }) => (
+const Home = ({ programArray }) => (
   <div>
-    <Hero prgArr={prgArray} />
-    <OrganizationList prgArr={prgArray} />
+    <Hero prgArr={programArray} />
+    <OrganizationList prgArr={programArray} />
     <WordAboutUs/>
-    <Connections/>
+    <Connections prgArr={programArray}/>
   </div>
 );
 
