@@ -8,7 +8,7 @@ const WordAboutUs = () => (
             <p className='intro-lead m-0'>A Word About Us</p>
             <h1>Connecting Youth For a Better Tomorrow</h1>
             <p className='wordDescription'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis eleifend ante et gravida. Duis quam ligula, consectetur ac justo at, feugiat condimentum lectus. Quisque congue rutrum lorem egestas tincidunt. Nunc vitae dapibus diam. </p>
-            <div className='buttonDiv'>
+            <div className='buttonDiv text-center mb-5'>
                 <a href="#" className='wordBtn wordBtnSolid'>Add a Program</a>
                 <a href="#" className='wordBtn wordBtnOutline'>Find Programs</a>
             </div>

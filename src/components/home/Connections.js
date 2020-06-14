@@ -1,4 +1,12 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
+import { faHandshake } from "@fortawesome/free-solid-svg-icons";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+
+import CountUp from 'react-countup';
 
 
 const Connections = ({prgArr}) => {
@@ -18,27 +26,34 @@ const Connections = ({prgArr}) => {
 
     return(
     <div className='connectionDiv'>
-        <div className='connect-head-div'>
-            <p className='connect-head' > PREPARED FOR SUCCESS</p>
-        </div>
-        <div className='connect-title-div'>
-            <h1>We're Pround of our Connections</h1>
-        </div>
+
             <div className="counterDiv">
                 <div className="data-div">
-                    <h1>{(prgArr.filter(prg=> prg.start_season === 'Summer' || prg.start_season === 'N/A')).length}</h1>
+                <span className="counter-icon">
+                    <FontAwesomeIcon icon={faCalendarAlt} className="m-0" />
+                  </span>
+                    <h1>{CountUp end={(prgArr.filter(prg=> prg.start_season === 'Summer' || prg.start_season === 'N/A')).length} duration{5}}</h1>
                     <p>SUMMER PROGRAMS</p>
                 </div>
                 <div className="data-div">
-                <h1>{(prgArr.filter(prg=> prg.categories.includes('education') || prg.categories.includes('colleges') || prg.categories.includes('schools'))).length}</h1>
+                 <span className="counter-icon">
+                <FontAwesomeIcon icon={faHandshake} className="m-0" />
+              </span>
+                <h1>{CountUp end={(prgArr.filter(prg=> prg.categories.includes('education') || prg.categories.includes('colleges') || prg.categories.includes('schools'))).length} duration={5}}</h1>
                     <p>EDUCATIONAL PROGRAMS</p>
                 </div>
                 <div className="data-div">
-                    <h1>{(prgArr.filter(prg => prg.age_group === 'All' || parseInt(prg.age_group.split('-')[1]) < 16)).length}</h1>
+                   <span className="counter-icon">
+                <FontAwesomeIcon icon={faStar} className="m-0" />
+              </span>
+                    <h1>{CountUp end={(prgArr.filter(prg => prg.age_group === 'All' || parseInt(prg.age_group.split('-')[1]) < 16)).length} duration={5}}</h1>
                     <p>YOUTH ORGANIZATIONS</p>
                 </div>
                 <div className="data-div">
-                    <h1>{8}</h1>
+                    <span className="counter-icon">
+                <FontAwesomeIcon icon={faHeart} className="m-0" />
+              </span>
+                    <h1>CountUp end={8} duration={5}</h1>
                     <p>TOP CATEGORY SPORTS</p>
                 </div>
             </div>
