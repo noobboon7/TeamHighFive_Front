@@ -36,3 +36,43 @@
     transform: rotate(360deg);
   }
 }
+
+/* yellow #ffc222 */
+
+
+.wordDiv{
+  padding:50px;
+  margin: 20px;
+  display: flex;
+  background-color: white;
+
+}
+
+.head{
+  color:#ffc222;
+}
+
+.wordDescription{
+  color: #999;
+}
+
+.buttonDiv{
+  display:flex;
+}
+
+.wordBtn{
+  border-radius: 3em;
+  padding: 1em;
+}
+
+.wordBtnSolid, .wordBtnOutline:hover {
+  background-color: var(--color-yellow);
+  border: 2px solid var(--light);
+  color: var(--white);
+}
+
+.wordBtnSolid:hover, .wordBtnOutline {
+  background-color: var(--white);
+  border: 2px solid var(--color-yellow);
+  color: var(--color-yellow);
+}

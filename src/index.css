@@ -9,6 +9,7 @@
   --color-blue-green: #42C3D3;
 }
 
+/* NOTE: Element Tag Styles */
 body {
   background-color: var(--color-off-white) !important;
   margin: 0;
@@ -24,18 +25,11 @@ body a:hover {
   text-decoration: none;
 }
 
-/* Navbar Styles */
-nav.navbar {
-  background-color: var(--white);
-}
-.navbar-brand .logo {
-  width: 100px;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 /* .icon {
   color: var(--color-blue-green);
 } */
@@ -45,10 +39,18 @@ code {
   text-transform: uppercase;
   font-size: .8rem;
 }
+.social-media a {
+  color: var(--color-yellow);
+}
+
+/* Navbar Styles */
+nav.navbar {
+  background-color: var(--white);
+}
 
 /* NOTE: Custom Navbar styles */
 nav {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 nav .logo {
   display: block;
@@ -65,7 +67,14 @@ nav .navbar-nav a:visited {
 nav .navbar-nav a:hover {
   color: var(--color-blue-green);
 }
+nav .navbar-nav .social-media a {
+  color: var(--color-yellow);
+}
 
+/* NOTE: Card Styles */
+.card .card-footer.social-media {
+  font-size: 1.55rem;
+}
 /* NOTE: Custom Footer styles */
 #footer {
   background-color: var(--color-blue-green);
