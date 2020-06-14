@@ -14,8 +14,6 @@ const SearchCategory = ({prgArr}) => {
 		categoriesArr = new Set(categoriesArr);
 		return Array.from(categoriesArr);
 	};
-	
-
 	return(
 		<InputGroup>
 			<DropdownButton

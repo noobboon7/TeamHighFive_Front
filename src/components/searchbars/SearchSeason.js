@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   InputGroup,
   FormControl,
@@ -6,27 +6,25 @@ import {
   DropdownButton,
 } from "react-bootstrap";
 
-const SearchSeason = () => (
-  <InputGroup>
-    <FormControl
-      placeholder="Recipient's username"
-      aria-label="Recipient's username"
-      aria-describedby="basic-addon2"
-    />
-
-    <DropdownButton
-      as={InputGroup.Append}
-      variant="info"
-      title="Dropdown"
-      id="input-group-dropdown-2"
-    >
-      <Dropdown.Item href="#">Action</Dropdown.Item>
-      <Dropdown.Item href="#">Another action</Dropdown.Item>
-      <Dropdown.Item href="#">Something else here</Dropdown.Item>
-      <Dropdown.Divider />
-      <Dropdown.Item href="#">Separated link</Dropdown.Item>
-    </DropdownButton>
-  </InputGroup>
-);
+const SearchSeason = ({prgArr}) => {
+  const seasons = ['Summer', 'Spring', 'Fall', 'Winter', 'Year-round'];
+  const [season, setSeason] = useState('Season');
+  return (
+		<InputGroup>
+			<DropdownButton
+				onSelect={(e) => setSeason(e)}
+				as={InputGroup.Append}
+				variant='info'
+				title={season}
+				id='input-group-dropdown-2'>
+				{seasons.map((program, idx) => (
+					<Dropdown.Item eventKey={program} key={idx}>
+						{program}
+					</Dropdown.Item>
+				))}
+			</DropdownButton>
+		</InputGroup>
+	);
+};
 
 export default SearchSeason;
