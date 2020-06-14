@@ -5,7 +5,12 @@ import Logo from "../static/youth_connection_logo.jpg";
 
 const Layout = ({ children }) => (
   <div>
-    <Navbar collapseOnSelect expand="lg" sticky="top">
+    <Navbar
+      collapseOnSelect
+      expand="lg"
+      sticky="top"
+      style={{ backgroundColor: "white" }}
+    >
       <Navbar.Brand href="#home">
         <img src={Logo}></img>
       </Navbar.Brand>

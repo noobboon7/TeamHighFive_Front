@@ -13,13 +13,10 @@ const OrgCard = ({ organization }) => (
         margin: "5vh",
       }}
     >
-      <Card.Img className={styles.img} variant="top" src={organization.logo} />
+      <Card.Img variant="top" className={styles.img} src={organization.logo} />
       <Card.Body>
         <Card.Title>{organization.name}</Card.Title>
         <Card.Text>{organization.description}</Card.Text>
-      </Card.Body>
-      <Card.Body>
-        <Card.Link href="#">{organization.url}</Card.Link>
       </Card.Body>
     </Card>
   </Col>
