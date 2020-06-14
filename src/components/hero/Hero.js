@@ -9,3 +9,4 @@ const Hero = ({ organizations_array }) => (
 );
 
 export default Hero;
+
