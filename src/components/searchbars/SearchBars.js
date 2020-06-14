@@ -11,7 +11,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 //
 const handleSubmit = (e) => {
   e.preventDefault();
-  console.log(props);
+  // console.log(props);
   // react router link to send user to results page 
 }
 // need to send back filter results from form groups 
