@@ -22,13 +22,19 @@ function App() {
   return (
     <Layout>
       <Switch>
-        <Route exact path="/" render={(routerProps) => <Home />} />
+        <Route
+          exact
+          path="/"
+          render={(routerProps) => <Home organizations_array={organizations} />}
+        />
         <Route exact path="/about" render={(routerProps) => <About />} />
         <Route exact path="/contact" render={(routerProps) => <Contact />} />
         <Route
           exact
           path="/results"
-          render={(routerProps) => <Results organizations={organizations} />}
+          render={(routerProps) => (
+            <Results organizations_array={organizations} />
+          )}
         />
         <Route
           exact
