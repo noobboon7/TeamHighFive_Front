@@ -22,7 +22,7 @@ const SearchBars = () => (
       <SearchLocation />
     </FormGroup>
     {' '}
-    <Button color="warning"><FontAwesomeIcon icon={faSearch} /></Button>
+    <Button><FontAwesomeIcon icon={faSearch} /></Button>
   </Form>
 );
 
