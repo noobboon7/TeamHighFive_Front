@@ -19,8 +19,15 @@ const About = () => {
     <div id="about">
       <div class="jumbotron jumbotron-fluid">
         <div class="container text-center">
-        <h6 className="intro-lead">Meet the team members</h6>
-        <h1 class="display-4">Our Team</h1>
+        <h6 className="intro-lead">How it Works</h6>
+        <h1 class="display-4">About</h1>
+        </div>
+      </div>
+
+      <div id="mission"className="container">
+        <div id="about-project" className="bg-white p-5">
+          <h2>Mission / <span className="text-info">Team Youth Connnection</span></h2>
+          <p>A web application catering to young black and brown users. The mission is to make extracurricular (specifically non-profit) organizations and programs more accessible and reachable to the youth. A user can search from our database for programs/companies providing technology support, youth programming, after-school programs, summer-school programs, internships, etc.</p>
         </div>
       </div>
 
