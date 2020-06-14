@@ -1,3 +1,5 @@
+
+
 .App {
   text-align: center;
 }
@@ -36,3 +38,111 @@
     transform: rotate(360deg);
   }
 }
+
+/* yellow #ffc222 */
+
+
+.wordDiv{
+  padding:50px;
+  margin: 20px;
+  display: flex;
+  background-color: white;
+
+}
+
+.head{
+  color:#ffc222;
+}
+
+.wordDescription{
+  color: #999;
+}
+
+.buttonDiv{
+  display:flex;
+}
+
+.wordBtn{
+  border-radius: 3em;
+  padding: 1em;
+}
+
+.wordBtnSolid, .wordBtnOutline:hover {
+  background-color: var(--color-yellow);
+  border: 2px solid var(--light);
+  color: var(--white);
+}
+
+.wordBtnSolid:hover, .wordBtnOutline {
+  background-color: var(--white);
+  border: 2px solid var(--color-yellow);
+  color: var(--color-yellow);
+}
+
+
+
+.connectionDiv {
+  background-image: url('./static/map.png');
+}
+
+.connectBtn {
+  border-radius: 3em;
+  padding: .5em 2em;
+  font-weight: 500;
+}
+.connectBtnSolid {
+  background-color: var(--color-blue-green);
+  border: 1px solid var(--light);
+  color: white;
+}
+
+.connectBtnSolid:hover{
+  background-color: var(--white);
+  border-style: solid;
+  border-color: var(--color-blue-green);
+  color: var(--color-blue-green);
+}
+
+.connection-counter-wrapper .counter-icon {
+  color: var(--color-blue-green);
+  font-size: 3em;
+}
+
+.connection-counter-wrapper .counter-number {
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.connection-counter-wrapper .counter-label {
+  font-size: 1em;
+  text-transform: uppercase;
+}
+.connection-counter-wrapper .counter-label span {
+  display: block;
+  color: var(--color-blue-green);
+}
+
+/* blue #42C3D3 */
+
+
+.counterDiv{
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.data-div{
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px;
+  text-align: center;
+}
+
+.btnDiv{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+

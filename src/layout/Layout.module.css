@@ -1,0 +1,14 @@
+.linkstyles {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.login {
+  display: flex;
+  justify-content: flex-end;
+}
+
+a {
+  margin: 0 10px;
+}
