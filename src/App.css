@@ -1,3 +1,5 @@
+
+
 .App {
   text-align: center;
 }
@@ -79,3 +81,54 @@
   border-radius: 50px;
   padding:10px;
 }
+
+
+
+.connectionDiv{
+  padding:50px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-image: url('./static/map.png');
+}
+
+.connect-head-div{
+  width: 100%;
+  color: #ffc222;
+  display: flex;
+  justify-content: center;
+}
+
+.connect-title-div{
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.connectBtn{
+  margin-right: 50px;
+  background-color:#42C3D3;
+  border-style: solid;
+  border-color: #42C3D3;
+  color: white;
+  border-radius: 50px;
+  padding:10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.connectBtn:hover{
+  margin-right: 50px;
+  background-color:white;
+  border-style: solid;
+  border-color: #42C3D3;
+  color: #42C3D3;
+  border-radius: 50px;
+  padding:10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* blue #42C3D3 */
