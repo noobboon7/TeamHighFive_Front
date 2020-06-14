@@ -36,8 +36,8 @@ const ShowPage = (props) => {
             <li>{program.age_group}</li>
             <li>{program.duration}</li>
             <li>{program.hours}</li>
-            <li><a className="btn btn-warning" href={program.program_url} target="_blank">Learn more</a></li>
             <li>{program.start_season}</li>
+            <li><a className="btn btn-warning" href={program.program_url} target="_blank">Learn more</a></li>
           </ul>
         </div>
       </Col>
