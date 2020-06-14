@@ -35,7 +35,8 @@ function App() {
           path="/howItWorks"
           render={(routerProps) => <HowItWorks />}
         />
-        <Route exact path="organization/:id" component={ShowPage} />
+        <Route exact path="/organization/:id" component={ShowPage} />
+  
       </Switch>
     </Layout>
   );

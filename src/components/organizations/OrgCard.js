@@ -1,9 +1,11 @@
 import React from "react";
 import { Col, Card } from "react-bootstrap";
 import styles from "./OrgCard.module.css";
+import {Link} from 'react-router-dom'
 
 const OrgCard = ({ organization }) => (
   <Col lg={4} sm={6}>
+    <Link to={`/organization/${organization.id}`}>
     <Card
       style={{
         width: "18rem",
@@ -21,7 +23,11 @@ const OrgCard = ({ organization }) => (
       <Card.Body>
         <Card.Link href="#">{organization.url}</Card.Link>
       </Card.Body>
+      <Card.Body>
+        
+      </Card.Body>
     </Card>
+    </Link>
   </Col>
 );
 
