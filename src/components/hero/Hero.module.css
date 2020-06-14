@@ -1,6 +1,6 @@
 .heroStyles {
   height: 85vh;
-  width: 100vw;
+  width: 100%;
   background-image: linear-gradient(
       to bottom,
       rgba(245, 246, 252, 0.52),

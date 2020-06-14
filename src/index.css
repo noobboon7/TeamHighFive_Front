@@ -7,6 +7,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Navbar Styles */
+nav.navbar {
+  background-color: var(--white);
+}
+.navbar-brand .logo {
+  width: 100px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
