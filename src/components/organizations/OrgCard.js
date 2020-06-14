@@ -15,19 +15,19 @@ const OrgCard = ({program}) => {
 
 
 
-  return ( 
-    <Col className="mb-5 col-lg-4 d-flex align-items-stretch" lg = {4}sm = {6} >
+  return (
+    <Col className="mb-5 col-lg-4 d-flex align-items-stretch organizationList-col" lg = {4}sm = {6} >
       <Card className="border-0">
-        <Card.Img className = "d-none"src = {program.logo}/> 
+        <Card.Img className = "d-none"src = {program.logo}/>
         <Card.Body >
-            <Card.Title> {program.name} </Card.Title> 
+            <Card.Title> {program.name} </Card.Title>
             <Card.Text > {formatDescription()} </Card.Text>
-            <Card.Link className="mx-0" href = {program.url}> 
-              {program.url} 
-            </Card.Link> 
-        
-          
-        </Card.Body > 
+            <Card.Link className="mx-0" href = {program.url}>
+              {program.url}
+            </Card.Link>
+
+
+        </Card.Body >
         <Card.Footer className="text-center">
           <Link to={`/organization/${program.organization_id}`}>
             <Button variant='info' renderAs="button" >
@@ -35,7 +35,7 @@ const OrgCard = ({program}) => {
             </Button>
           </Link>
         </Card.Footer>
-      </Card> 
+      </Card>
     </Col>
   );
 };

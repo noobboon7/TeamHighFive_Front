@@ -11,16 +11,16 @@ import CountUp from 'react-countup';
 const Connections = ({prgArr}) => {
 
     // const categoryCounts = () => {
-    //     let catArr = (prgArr.map(prg => prg.categories))    
+    //     let catArr = (prgArr.map(prg => prg.categories))
     //     catArr = catArr.flat()
-    //      catArr = catArr.reduce((acc, word) => { 
+    //      catArr = catArr.reduce((acc, word) => {
     //         acc[word] = (acc[word] || 0) + 1
     //         return acc;
     //     },[])
-  
+
     // };
 
-    return( 
+    return(
         <div className='connectionDiv container-fluid d-flex flex-column align-items-center py-5 my-5'>
         <div className='connect-head-div'>
             <span className='intro-lead'>Prepare for Success</span>
@@ -58,7 +58,7 @@ const Connections = ({prgArr}) => {
                 <FontAwesomeIcon icon={faHeart} className="m-0" />
               </span>
               <p className="counter-number"><CountUp end={(prgArr.filter(prg => prg.age_group === 'All' || parseInt(prg.age_group.split('-')[1]) < 16)).length} duration={5} /></p>
-              <p className="counter-label">Youth Organization</p>
+              <p className="counter-label">Youth Programs</p>
             </div>
           </div>
         </div>
@@ -67,5 +67,5 @@ const Connections = ({prgArr}) => {
     </div>
     )
     };
-  
+
   export default Connections;
