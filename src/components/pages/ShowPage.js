@@ -42,8 +42,17 @@ const ShowPage = (props) => {
       <Banner name={organization.name} />
       <div className="container mt-5">
         <Row>
+          <Col md="4">
+          <p>organization logo</p>
+          </Col>
+          <Col md="6">
           <h1>{organization.name}</h1>
           <p>{organization.description}</p>
+          </Col>
+        </Row>
+
+        <Row>
+          {lis}
         </Row>
       </div>
       {/* <Row>
