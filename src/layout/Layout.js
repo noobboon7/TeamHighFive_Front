@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Navbar, Nav, Row } from "react-bootstrap";
 import Footer from "../styled-components/Footer";
+import styles from "./Layout.module.css";
 import Logo from "../static/youth_connection_logo.jpg";
 
 const Layout = ({ children }) => (
@@ -16,15 +18,20 @@ const Layout = ({ children }) => (
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="justify-content-center">
-          <Nav.Link href="#">HOME</Nav.Link>
-          <Nav.Link href="#">ABOUT</Nav.Link>
-          <Nav.Link href="#">HOW IT WORKS</Nav.Link>
-          <Nav.Link href="#">ADD AN ORGANIZATION</Nav.Link>
-          <Nav.Link href="#">CONTACT</Nav.Link>
+        <Nav>
+          <div className={styles.linkstyles}>
+            <Link to="/">HOME</Link>
+            <Link to="/about">ABOUT</Link>
+            <Link to="/howItWorks">HOW IT WORKS</Link>
+            <Link to="#">ADD AN ORGANIZATION</Link>
+            <Link to="/contact">CONTACT</Link>
+          </div>{" "}
+          <div></div>
         </Nav>
-        <Nav className="justify-content-end">
-          <Nav.Link href="#">ORGANIZATION LOGIN</Nav.Link>
+        <Nav>
+          <div className={styles.login}>
+            <Link href="#">ORGANIZATION LOGIN</Link>
+          </div>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
