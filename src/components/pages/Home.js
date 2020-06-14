@@ -10,7 +10,7 @@ const Home = ({ prgArray }) => (
     <Hero prgArr={prgArray} />
     <OrganizationList prgArr={prgArray} />
     <WordAboutUs/>
-    <Connections/>
+    <Connections prgArr={prgArray}/>
   </div>
 );
 
