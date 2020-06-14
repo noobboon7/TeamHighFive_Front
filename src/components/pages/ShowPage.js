@@ -1,32 +1,31 @@
-import React, {useState, useEffect} from "react";
-import Layout from "../../layout/Layout.js";
+import React, { useState, useEffect } from "react";
+import Banner from "../banner/Banner";
 
 const ShowPage = (props) => {
-
   const [organization, setOrganization] = useState({});
   const {
     match: { params },
   } = props;
 
   let id = parseInt(params.id);
-  console.log(id); 
+  console.log(id);
 
-  async function fetchOrganization(){
+  useEffect(() => {
+    async function fetchOrganization() {
+      let org = await fetch(
+        `https://connection-youth.herokuapp.com/organizations/${id}`
+      );
 
-    let org = await fetch(`https://connection-youth.herokuapp.com/organizations/${id}`)
+      let data = await org.json();
+      setOrganization(data);
+    }
+  }, [organization]);
 
-    let data = await org.json(); 
-    setOrganization(data); 
-  }
-
-  
-  fetchOrganization();
-  
-    return (
-      <div>
-        <h1>{organization.name}</h1>
-      </div>
-    )
+  return (
+    <div>
+      <Banner name={organization.name} />
+    </div>
+  );
 };
 
 export default ShowPage;
