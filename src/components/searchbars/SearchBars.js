@@ -9,14 +9,17 @@ import SearchLocation from "./SearchLocation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 //
-const handleSubmit = (e) => {
-  e.preventDefault();
-  console.log(e);
-  // react router link to send user to results page 
-}
 // need to send back filter results from form groups 
-const SearchBars = ({ prgArr }) => (
-	<Form inline onSubmit={handleSubmit}>
+const SearchBars = ({prgArr, history}) => {
+	
+	const handleSubmit = () => {
+		history.push('/results');
+		console.log('hello', history );
+		// react router link to send user to results page 
+	}
+	
+	return (
+		<Form inline>
 		<FormGroup>
 			<SearchCategory prgArr={prgArr} />
 		</FormGroup>
@@ -26,10 +29,11 @@ const SearchBars = ({ prgArr }) => (
 		<FormGroup>
 			<SearchLocation prgArr={prgArr} />
 		</FormGroup>
-		<Button>
+		<Button onClick={handleSubmit}>
 			<FontAwesomeIcon icon={faSearch} />
 		</Button>
 	</Form>
-);
+	);
+}
 
 export default withRouter(SearchBars);
