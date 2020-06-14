@@ -10,42 +10,43 @@ import { Route, Switch } from "react-router-dom";
 import "./App.css";
 
 function App() {
-  const [organizations, setOrganizations] = useState([]);
-  useEffect(() => {
-    if (organizations.length === 0) {
-      fetch("https://connection-youth.herokuapp.com/organizations")
-        .then((res) => res.json())
-        .then((orgs) => setOrganizations(orgs));
-    }
-  }, [organizations]);
+	const [programs, setPrograms] = useState([]);
+	useEffect(() => {
+		if (programs.length === 0) {
+			fetch("https://connection-youth.herokuapp.com/programs")
+				.then((res) => res.json())
+				.then((programs) => {
+					setPrograms(programs);
+				});
+		}
+	}, [programs]);
 
-  return (
-    <Layout>
-      <Switch>
-        <Route
-          exact
-          path="/"
-          render={(routerProps) => <Home organizations_array={organizations} />}
-        />
-        <Route exact path="/about" render={(routerProps) => <About />} />
-        <Route exact path="/contact" render={(routerProps) => <Contact />} />
-        <Route
-          exact
-          path="/results"
-          render={(routerProps) => (
-            <Results organizations_array={organizations} />
-          )}
-        />
-        <Route
-          exact
-          path="/howItWorks"
-          render={(routerProps) => <HowItWorks />}
-        />
-        <Route exact path="/organization/:id" component={ShowPage} />
-  
-      </Switch>
-    </Layout>
-  );
+	return (
+		<Layout>
+			<Switch>
+				<Route
+					exact
+					path='/'
+					render={(routerProps) => <Home prgArray={programs} />}
+				/>
+				<Route exact path='/about' render={(routerProps) => <About />} />
+				<Route exact path='/contact' render={(routerProps) => <Contact />} />
+				<Route
+					exact
+					path='/results'
+					render={(routerProps) => (
+						<Results prgArray={programs} />
+					)}
+				/>
+				<Route
+					exact
+					path='/howItWorks'
+					render={(routerProps) => <HowItWorks />}
+				/>
+				<Route exact path='/organization/:id' component={ShowPage} />
+			</Switch>
+		</Layout>
+	);
 }
 
 export default App;
