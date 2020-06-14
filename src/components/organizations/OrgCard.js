@@ -17,28 +17,16 @@ const OrgCard = ({
   }
 
   return ( <
-    Col lg = {
+    Col className="mb-5" lg = {
       4
     }
     sm = {
       6
     } >
     <
-    Card style = {
-      {
-        width: "18rem",
-        height: "16rem",
-        justifyContent: "space-around",
-        alignContent: "center",
-        margin: "5vh",
-        fontSize: "12px",
-      }
-    } >
+    Card className="border-0">
     <
-    Card.Img className = {
-      styles.img
-    }
-    variant = "top"
+    Card.Img className = "d-none"
     src = {
       organization.logo
     }
@@ -50,11 +38,9 @@ const OrgCard = ({
     } < /Card.Title> <
     Card.Text > {
       formatDescription()
-    } < /Card.Text> < /
-    Card.Body > <
-    Card.Body >
+    } < /Card.Text>
     <
-    Card.Link href = {
+    Card.Link className="mx-0" href = {
       organization.url
     } > {
       organization.url
