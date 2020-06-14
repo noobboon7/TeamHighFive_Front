@@ -10,7 +10,7 @@ const Home = ({ programArray }) => (
     <Hero prgArr={programArray} />
     <OrganizationList prgArr={programArray} />
     <WordAboutUs/>
-    <Connections/>
+    <Connections prgArr={prgArray}/>
   </div>
 );
 
