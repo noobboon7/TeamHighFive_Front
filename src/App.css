@@ -68,15 +68,15 @@
 }
 
 .wordBtnSolid, .wordBtnOutline:hover {
-  background-color: var(--color-yellow);
+  background-color: var(--color-med-blue);
   border: 2px solid var(--light);
   color: var(--white);
 }
 
 .wordBtnSolid:hover, .wordBtnOutline {
   background-color: var(--white);
-  border: 2px solid var(--color-yellow);
-  color: var(--color-yellow);
+  border: 2px solid var(--color-med-blue);
+  color: var(--color-med-blue);
 }
 
 

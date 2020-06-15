@@ -32,13 +32,28 @@ const ShowPage = (props) => {
           key={program.id}
         >
           <h4 className="display-6">{program.name}</h4>
-          <ul className="list-unstyled">
-            <li>{program.age_group}</li>
-            <li>{program.duration}</li>
-            <li>{program.hours}</li>
-            <li>{program.start_season}</li>
-            <li><a className="btn btn-warning" href={program.program_url} target="_blank">Learn more</a></li>
-          </ul>
+          <div className="row">
+            <div className="col-lg-6"><span className="intro-lead">Age Group:</span></div>
+            <div className="col-lg-6">{program.age_group}</div>
+          </div>
+
+          <div className="row">
+            <div className="col-lg-6"><span className="intro-lead">Season:</span></div>
+            <div className="col-lg-6">{program.start_season}</div>
+          </div>
+
+          <div className="row">
+            <div className="col-lg-6"><span className="intro-lead">Duration:</span></div>
+            <div className="col-lg-6">{program.duration}</div>
+          </div>
+
+          <div className="row">
+            <div className="col-lg-6"><span className="intro-lead">Hours:</span></div>
+            <div className="col-lg-6">{program.hours}</div>
+          </div>
+
+          <a className="btn btn-warning" href={program.program_url} target="_blank" rel="noopener noreferrer">Learn more</a>
+
         </div>
       </Col>
     ))
@@ -60,7 +75,7 @@ const ShowPage = (props) => {
           </Col>
         </Row>
 
-        <Row>
+        <Row className="d-flex align-items-stretch">
           {lis}
         </Row>
       </div>

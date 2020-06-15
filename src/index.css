@@ -5,7 +5,8 @@
 :root {
   --color-off-white: #f4f6fb;
   --color-black: #A0A6B2;
-  --color-yellow: #FFC222;
+  --color-med-blue: #6A8AA6;
+  /* --color-med-blue: #FFC222; */
   --color-blue-green: #42C3D3;
 }
 
@@ -35,12 +36,12 @@ code {
 } */
 
 .intro-lead {
-  color: var(--color-yellow);
+  color: var(--color-med-blue);
   text-transform: uppercase;
   font-size: .8rem;
 }
 .social-media a {
-  color: var(--color-yellow);
+  color: var(--color-med-blue);
 }
 
 /* Navbar Styles */
@@ -50,14 +51,17 @@ nav.navbar {
 
 /* NOTE: Custom Navbar styles */
 nav {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 nav .logo {
   display: block;
-  width: 100px;
+  width: 10rem;
 }
 nav.custom-navbar {
   background-color: var(--white);
+}
+nav.custom-navbar .list-inline-item:not(:last-child) {
+  margin-right: 2rem;
 }
 nav .navbar-nav a,
 nav .navbar-nav a:link,
@@ -68,7 +72,7 @@ nav .navbar-nav a:hover {
   color: var(--color-blue-green);
 }
 nav .navbar-nav .social-media a {
-  color: var(--color-yellow);
+  color: var(--color-med-blue);
 }
 
 /* NOTE: Card Styles */
@@ -97,15 +101,15 @@ nav .navbar-nav .social-media a {
 }
 
 .wordBtnSolid, .wordBtnOutline:hover {
-  background-color: var(--color-yellow);
+  background-color: var(--color-med-blue);
   border: 2px solid var(--light);
   color: var(--white);
 }
 
 .wordBtnSolid:hover, .wordBtnOutline {
   background-color: var(--white);
-  border: 2px solid var(--color-yellow);
-  color: var(--color-yellow);
+  border: 2px solid var(--color-med-blue);
+  color: var(--color-med-blue);
 }
 
 /* NOTE: Custom Footer styles */
@@ -119,7 +123,7 @@ nav .navbar-nav .social-media a {
   text-decoration: none;
 }
 #footer a:hover {
-  color: var(--color-yellow);
+  color: var(--color-med-blue);
   text-decoration: none;
 }
 
