@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import Will from "../../static/team/will.jpg";
 import Kellie from "../../static/team/kellie.jpg";
@@ -19,16 +18,17 @@ const About = () => {
     <div id="about">
       <div class="jumbotron jumbotron-fluid bg-info">
         <div class="container text-center">
-        <h6 className="intro-lead">How it Works</h6>
+{        // <h6 className="intro-lead">How it Works</h6>
+}
         <h1 class="display-4 text-white">About</h1>
         </div>
       </div>
 
-      <div id="mission" className="container mb-5">
-        <div id="about-project" className="bg-white p-5">
-          <h2>Mission / <span className="text-info">Team Youth Connnection</span></h2>
-          <p>A web application catering to young black and brown users. The mission is to make extracurricular (specifically non-profit) organizations and programs more accessible and reachable to the youth. A user can search from our database for programs/companies providing technology support, youth programming, after-school programs, summer-school programs, internships, etc.</p>
-        </div>
+      <div id="mission" className="container">
+      <div id="about-project" className="bg-white p-5">
+      <h2>Mission / <span className="text-info">Team Youth Connnection</span></h2>
+      <p>A web application catering to young black and brown users. The mission is to make extracurricular (specifically non-profit) organizations and programs more accessible and reachable to the youth. A user can search from our database for programs/companies providing technology support, youth programming, after-school programs, summer-school programs, internships, etc.</p>
+      </div>
       </div>
 
       <div id="the-team" className="container-fluid">
@@ -46,7 +46,7 @@ const About = () => {
                 </div>
                 <div class="card-footer social-media border-0">
                 <ul className="list-inline m-0 text-uppercase text-center">
-                  <li class="list-inline-item"><a href="https://www.linkedin.com/in/williamgolden5/" target="_blank" className="m-0">
+                  <li class="list-inline-item"><a href="https://www.linkedin.com/in/williamgolden5/" target="_blank" rel="noopener noreferrer" className="m-0">
                   <FontAwesomeIcon icon={faLinkedin} className="m-0" /></a></li>
                 </ul>
                 </div>
@@ -63,7 +63,7 @@ const About = () => {
                 </div>
                 <div class="card-footer social-media border-0">
                 <ul className="list-inline m-0 text-uppercase text-center">
-                  <li class="list-inline-item"><a href="https://www.linkedin.com/in/kellieporter" target="_blank" className="m-0">
+                  <li class="list-inline-item"><a href="https://www.linkedin.com/in/kellieporter" target="_blank" rel="noopener noreferrer" className="m-0">
                   <FontAwesomeIcon icon={faLinkedin} className="m-0" /></a></li>
                 </ul>
                 </div>
@@ -87,9 +87,9 @@ const About = () => {
                   </div>
                   <div class="card-footer social-media border-0">
                   <ul className="list-inline m-0 text-uppercase text-center">
-                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/katharine-francis10/" target="_blank" className="m-0">
+                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/katharine-francis10/" target="_blank" rel="noopener noreferrer" className="m-0">
                     <FontAwesomeIcon icon={faLinkedin} className="m-0" /></a></li>
-                    <li class="list-inline-item"><a href="https://github.com/KatieFrey" target="_blank" className="m-0">
+                    <li class="list-inline-item"><a href="https://github.com/KatieFrey" target="_blank" rel="noopener noreferrer" className="m-0">
                     <FontAwesomeIcon icon={faGithub} className="m-0" /></a></li>
                   </ul>
                   </div>
@@ -106,9 +106,9 @@ const About = () => {
                 </div>
                 <div class="card-footer social-media border-0">
                 <ul className="list-inline m-0 text-uppercase text-center">
-                  <li class="list-inline-item"><a href="https://linkedin.com/in/jerry-velazquez-8540b9bb" target="_blank" className="m-0">
+                  <li class="list-inline-item"><a href="https://linkedin.com/in/jerry-velazquez-8540b9bb" target="_blank" rel="noopener noreferrer" className="m-0">
                   <FontAwesomeIcon icon={faLinkedin} className="m-0" /></a></li>
-                  <li class="list-inline-item"><a href="https://github.com/noobboon7" target="_blank" className="m-0">
+                  <li class="list-inline-item"><a href="https://github.com/noobboon7" target="_blank" rel="noopener noreferrer" className="m-0">
                   <FontAwesomeIcon icon={faGithub} className="m-0" /></a></li>
                 </ul>
                 </div>
@@ -125,9 +125,9 @@ const About = () => {
                 </div>
                 <div class="card-footer social-media border-0">
                 <ul className="list-inline m-0 text-uppercase text-center">
-                  <li class="list-inline-item"><a href="https://www.linkedin.com/in/parker-bacall/" target="_blank" className="m-0">
+                  <li class="list-inline-item"><a href="https://www.linkedin.com/in/parker-bacall/" target="_blank" rel="noopener noreferrer" className="m-0">
                   <FontAwesomeIcon icon={faLinkedin} className="m-0" /></a></li>
-                  <li class="list-inline-item"><a href="https://github.com/parkerbacall" target="_blank" className="m-0">
+                  <li class="list-inline-item"><a href="https://github.com/parkerbacall" target="_blank" rel="noopener noreferrer" className="m-0">
                   <FontAwesomeIcon icon={faGithub} className="m-0" /></a></li>
                 </ul>
                 </div>
@@ -144,9 +144,9 @@ const About = () => {
                 </div>
                 <div class="card-footer social-media border-0">
                 <ul className="list-inline m-0 text-uppercase text-center">
-                  <li class="list-inline-item"><a href="https://www.linkedin.com/in/jchen143/" target="_blank" className="m-0">
+                  <li class="list-inline-item"><a href="https://www.linkedin.com/in/jchen143/" target="_blank" rel="noopener noreferrer" className="m-0">
                   <FontAwesomeIcon icon={faLinkedin} className="m-0" /></a></li>
-                  <li class="list-inline-item"><a href="https://github.com/jchen143" target="_blank" className="m-0">
+                  <li class="list-inline-item"><a href="https://github.com/jchen143" target="_blank" rel="noopener noreferrer" className="m-0">
                   <FontAwesomeIcon icon={faGithub} className="m-0" /></a></li>
                 </ul>
                 </div>
@@ -163,7 +163,7 @@ const About = () => {
                 </div>
                 <div class="card-footer social-media border-0">
                 <ul className="list-inline m-0 text-uppercase text-center">
-                  <li class="list-inline-item"><a href="http://www.linkedin.com/in/cihadald" target="_blank" className="m-0">
+                  <li class="list-inline-item"><a href="http://www.linkedin.com/in/cihadald" target="_blank" rel="noopener noreferrer" className="m-0">
                   <FontAwesomeIcon icon={faLinkedin} className="m-0" /></a></li>
                   <li class="list-inline-item"><a href="https://github.com/cihataldanmaz" className="m-0">
                   <FontAwesomeIcon icon={faGithub} className="m-0" /></a></li>
@@ -182,9 +182,9 @@ const About = () => {
                 </div>
                 <div class="card-footer social-media border-0">
                 <ul className="list-inline m-0 text-uppercase text-center">
-                  <li class="list-inline-item"><a href="https://www.linkedin.com/in/jdesire/" target="_blank" className="m-0">
+                  <li class="list-inline-item"><a href="https://www.linkedin.com/in/jdesire/" target="_blank" rel="noopener noreferrer" className="m-0">
                   <FontAwesomeIcon icon={faLinkedin} className="m-0" /></a></li>
-                  <li class="list-inline-item"><a href="https://github.com/berryny" target="_blank" className="m-0">
+                  <li class="list-inline-item"><a href="https://github.com/berryny" target="_blank" rel="noopener noreferrer" className="m-0">
                   <FontAwesomeIcon icon={faGithub} className="m-0" /></a></li>
                 </ul>
                 </div>

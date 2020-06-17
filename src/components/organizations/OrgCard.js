@@ -30,7 +30,7 @@ const OrgCard = ({program}) => {
         </Card.Body >
         <Card.Footer className="text-center">
           <Link to={`/organization/${program.organization_id}`}>
-            <Button variant='info' renderAs="button" >
+            <Button variant='info' renderas="button" >
               <span>See More!</span>
             </Button>
           </Link>
