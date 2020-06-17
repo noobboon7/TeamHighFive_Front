@@ -63,7 +63,7 @@ const Connections = ({prgArr}) => {
           </div>
         </div>
 
-        <button className='connectBtn connectBtnSolid'>Join the Movement</button>
+        <a href="https://forms.gle/8UpNNNfrWh5Exnvd9" target="_blank" rel="noopener noreferrer" className='connectBtn connectBtnSolid'>Join the Movement</button>
     </div>
     )
     };
