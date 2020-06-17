@@ -32,7 +32,7 @@ const Layout = ({ children }) => (
             <li className="list-inline-item"><Link to="/">Home</Link></li>
             <li className="list-inline-item"><Link to="/about">About</Link></li>
             <li className="list-inline-item"><Link to="/howItWorks">How it Works</Link></li>
-            <li className="list-inline-item"><a href="https://docs.google.com/forms/d/e/1FAIpQLSeMyLoUKIEGO9U94nz1zI8qX-G46YYd8jfr60AarUC4_V4FbA/viewform">Add an Organization</a></li>
+            <li className="list-inline-item"><a href="https://forms.gle/8UpNNNfrWh5Exnvd9">Add an Organization</a></li>
             <li className="list-inline-item"><Link to="/contact">Contact</Link></li>
 
           </ul>
