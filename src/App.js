@@ -36,13 +36,14 @@ function App() {
 
 	const filterResults = (valuesObj) => {
 		// setfilteredWords(valuesObj}));
-		const results = programs.filter((program, idx) => {
+		const results = programs.filter((program) => {
 			// console.log(valuesObj.location, program.location)
-			// return filteredKeywords.location !== program.location;
+			return  program.location === 'Virtual';
 		});
 		return results;
 	};
 	
+	console.log(filterResults());
 	return (
 		<fetchContext.Provider value={{programs, organizations, filterResults}}>
 			<Layout>

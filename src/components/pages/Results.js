@@ -1,10 +1,10 @@
 import React from "react";
 
-import OrganizationsList from "../organizations/OrganizationList";
+import ProgramsList from "../programsList";
 
 const Results = ({ prgArray }) => (
   <div>
-    <OrganizationsList prgArr={prgArray} />
+    <ProgramsList prgArr={prgArray} />
   </div>
 );
 
