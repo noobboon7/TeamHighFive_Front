@@ -15,6 +15,7 @@ import {fetchContext} from './fetchContext';
 function App() {
 	const [programs, setPrograms] = useState([]);
 	const [organizations, setOrganizations] = useState([]);
+	// const [filteredKeywords, setfilteredWords] = useState({});
 
 	useEffect(() => {
 		if (programs.length === 0) {
@@ -33,10 +34,11 @@ function App() {
 		}
 	}, [programs, organizations]);
 
-	const filterResults = (valuesArr=['Brooklyn, NY']) => {
-		// compare valuesArr to programs.categories => which is and array 
+	const filterResults = (valuesObj) => {
+		// setfilteredWords(valuesObj}));
 		const results = programs.filter((program, idx) => {
-			return valuesArr.forEach(select => select !== program.location);
+			// console.log(valuesObj.location, program.location)
+			// return filteredKeywords.location !== program.location;
 		});
 		return results;
 	};

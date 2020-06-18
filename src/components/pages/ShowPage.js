@@ -22,7 +22,7 @@ const ShowPage = (props) => {
       setOrganization(data);
     }
     fetchOrganization();
-  }, []);
+  }, [id]);
 
   let programs = organization.programs;
   let lis = programs ? (

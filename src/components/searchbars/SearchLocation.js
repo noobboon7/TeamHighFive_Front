@@ -1,12 +1,11 @@
 import React, {useState} from "react";
 import {
   InputGroup,
-  FormControl,
   Dropdown,
   DropdownButton,
 } from "react-bootstrap";
 
-const SearchLocation = ({prgArr, getVal ,valArr}) => {
+const SearchLocation = ({prgArr, getVal }) => {
   const [location, setLocation] = useState('Location');
   const parseLocation = () => {
     let locations = prgArr.map(program => program.location);
@@ -18,7 +17,7 @@ const SearchLocation = ({prgArr, getVal ,valArr}) => {
       <InputGroup>
       <DropdownButton
         onSelect={(e) => {
-          getVal([e, ...valArr])
+          getVal(valObj => ({...valObj, location: e }));
           setLocation(e)}}
         as={InputGroup.Append}
         variant="info"
