@@ -7,9 +7,9 @@ import Connections from "../home/Connections";
 
 const Home = ({ programArray }) => (
   <div>
-    <Hero prgArr={programArray} />
+    <Hero/>
     <div className="heroStyles">
-    <OrganizationList prgArr={programArray} />
+    <OrganizationList />
     </div>
     <WordAboutUs/>
     <Connections prgArr={programArray}/>

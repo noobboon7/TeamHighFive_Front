@@ -6,13 +6,15 @@ import {
   DropdownButton,
 } from "react-bootstrap";
 
-const SearchSeason = ({prgArr}) => {
+const SearchSeason = ({getVal,valArr}) => {
   const seasons = ['Summer', 'Spring', 'Fall', 'Winter', 'Year-round'];
   const [season, setSeason] = useState('Season');
   return (
 		<InputGroup>
 			<DropdownButton
-				onSelect={(e) => setSeason(e)}
+				onSelect={(e) => {
+					getVal([e,...valArr])
+					setSeason(e)}}
 				as={InputGroup.Append}
 				variant='info'
 				title={season}

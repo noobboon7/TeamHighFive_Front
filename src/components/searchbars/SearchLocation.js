@@ -6,18 +6,20 @@ import {
   DropdownButton,
 } from "react-bootstrap";
 
-const SearchLocation = ({prgArr}) => {
+const SearchLocation = ({prgArr, getVal ,valArr}) => {
   const [location, setLocation] = useState('Location');
   const parseLocation = () => {
     let locations = prgArr.map(program => program.location);
-    locations = new Set(locations)
-    locations = Array.from(locations)
+    locations = new Set(locations);
+    locations = Array.from(locations);
     return locations;
   };
   return(
       <InputGroup>
       <DropdownButton
-        onSelect={(e) => setLocation(e)}
+        onSelect={(e) => {
+          getVal([e, ...valArr])
+          setLocation(e)}}
         as={InputGroup.Append}
         variant="info"
         title={location}
