@@ -39,11 +39,20 @@ function App() {
 	const filterResults = (valuesObj) => {
 		setfilteredWords(valuesObj); //testing state, delete after tests 
 		const results = programs.filter((program) => {
-			// IMPORTANT need to optimaztion for multiple render 
+			// IMPORTANT need to optimaztion for multiple render in app.js
 			// re renders are breaking the filter, by making keywords undefinded
-			return  program.start_season === 'Summer'; //working fiter
+			
+			//Proof of concept 
+			// return  program.start_season === 'Summer'; //working fiter
 			// return  program.location === 'Virtual'; //working filter
 			// return program.categories.some((el) => el === "youth activities"); //working filter 
+			
+			//completed filter function 
+			return (
+				program.start_season === "Summer" &&
+				program.categories.some((el) => el === "youth activities") &&
+				program.location === "Virtual"
+			); 
 		});
 		return results;
 	};
