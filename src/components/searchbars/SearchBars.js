@@ -1,6 +1,8 @@
 import React, {useContext, useState} from "react";
 import {withRouter} from 'react-router-dom';
 import { fetchContext } from "../../fetchContext";
+import useFilterResults from "../../hooks/useFilterResults";
+
 
 import SearchCategory from "./SearchCategory";
 import SearchSeason from "./SearchSeason";
@@ -14,12 +16,15 @@ const SearchBars = ({history}) => {
 	const [value, setValue] = useState({});
 	const contextArrays = useContext(fetchContext);
 	
+	
 	let programs = contextArrays.programs;
-	let filterThing = contextArrays.filterResults;
-
+	let filter = contextArrays.setFilteredProgramsArr;
+	
+	const filteredResults = useFilterResults(programs, value);
+	
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		filterThing(value);
+		filter(filteredResults)
 		history.push('/results');
 	};
 	// console.log(value)	 fix multiple renders Please

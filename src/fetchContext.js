@@ -2,9 +2,9 @@ import React from 'react';
 
 let organizations = [];
 let programs = [];
-let filterResults;
+let setFilteredResultsArr;
 export const fetchContext = React.createContext({
   organizations,
   programs,
-  filterResults
+  setFilteredResultsArr
 });

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Route, Switch } from "react-router-dom";
 
 import Layout from "./layout/Layout";
@@ -15,50 +15,29 @@ import {fetchContext} from './fetchContext';
 function App() {
 	const [programs, setPrograms] = useState([]);
 	const [organizations, setOrganizations] = useState([]);
-	const [filteredKeywords, setfilteredWords] = useState({});
-
-	console.log(filteredKeywords); //re rendering 16 times why? 
-	console.count(); 
+	const [filteredProgramsArr, setFilteredProgramsArr] = useState([]);
+	
 	useEffect(() => {
-		if (programs.length === 0) {
+		if (programs.length < 1) {
 			fetch("https://connection-youth.herokuapp.com/programs")
 				.then((res) => res.json())
 				.then((programs) => {
 					setPrograms(programs);
 				});
 		}
-		if (organizations.length === 0) {
+		if (organizations.length < 1) {
 			fetch("https://connection-youth.herokuapp.com/organizations")
 				.then((res) => res.json())
 				.then((organizations) => {
 					setOrganizations(organizations);
 				});
 		}
+		return console.log('cleaning up'), console.count();
 	}, [programs, organizations]);
 
-	const filterResults = (valuesObj) => {
-		setfilteredWords(valuesObj); //testing state, delete after tests 
-		const results = programs.filter((program) => {
-			// IMPORTANT need to optimaztion for multiple render in app.js
-			// re renders are breaking the filter, by making keywords undefinded
-			
-			//Proof of concept 
-			// return  program.start_season === 'Summer'; //working fiter
-			// return  program.location === 'Virtual'; //working filter
-			// return program.categories.some((el) => el === "youth activities"); //working filter 
-			
-			//completed filter function 
-			return (
-				program.start_season === "Summer" &&
-				program.categories.some((el) => el === "youth activities") &&
-				program.location === "Virtual"
-			); 
-		});
-		return results;
-	};
-	
+
 	return (
-		<fetchContext.Provider value={{programs, organizations, filterResults}}>
+		<fetchContext.Provider value={{programs, organizations, setFilteredProgramsArr}}>
 			<Layout>
 				<Switch>
 					<Route
@@ -73,7 +52,7 @@ function App() {
 						exact
 						path='/results'
 						render={(routerProps) => (
-							<Results prgArray={filterResults()} />
+							<Results prgArray={filteredProgramsArr} />
 						)}
 						/>
 					<Route
