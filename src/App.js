@@ -15,8 +15,10 @@ import {fetchContext} from './fetchContext';
 function App() {
 	const [programs, setPrograms] = useState([]);
 	const [organizations, setOrganizations] = useState([]);
-	// const [filteredKeywords, setfilteredWords] = useState({});
+	const [filteredKeywords, setfilteredWords] = useState({});
 
+	console.log(filteredKeywords); //re rendering 16 times why? 
+	console.count(); 
 	useEffect(() => {
 		if (programs.length === 0) {
 			fetch("https://connection-youth.herokuapp.com/programs")
@@ -35,15 +37,17 @@ function App() {
 	}, [programs, organizations]);
 
 	const filterResults = (valuesObj) => {
-		// setfilteredWords(valuesObj}));
+		setfilteredWords(valuesObj); //testing state, delete after tests 
 		const results = programs.filter((program) => {
-			// console.log(valuesObj.location, program.location)
-			return  program.location === 'Virtual';
+			// IMPORTANT need to optimaztion for multiple render 
+			// re renders are breaking the filter, by making keywords undefinded
+			return  program.start_season === 'Summer'; //working fiter
+			// return  program.location === 'Virtual'; //working filter
+			// return program.categories.some((el) => el === "youth activities"); //working filter 
 		});
 		return results;
 	};
 	
-	console.log(filterResults());
 	return (
 		<fetchContext.Provider value={{programs, organizations, filterResults}}>
 			<Layout>
