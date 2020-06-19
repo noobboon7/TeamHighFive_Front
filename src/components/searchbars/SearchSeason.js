@@ -1,18 +1,21 @@
 import React, {useState} from "react";
 import {
-  InputGroup,
-  FormControl,
+	InputGroup,
   Dropdown,
   DropdownButton,
 } from "react-bootstrap";
 
-const SearchSeason = ({prgArr}) => {
+const SearchSeason = ({getVal,valObj}) => {
   const seasons = ['Summer', 'Spring', 'Fall', 'Winter', 'Year-round'];
   const [season, setSeason] = useState('Season');
-  return (
+	return (
 		<InputGroup>
 			<DropdownButton
-				onSelect={(e) => setSeason(e)}
+				value='season'
+				onSelect={(e) => {
+					getVal(valObj => ({...valObj, season:e}));
+					setSeason(e);
+				}}
 				as={InputGroup.Append}
 				variant='info'
 				title={season}

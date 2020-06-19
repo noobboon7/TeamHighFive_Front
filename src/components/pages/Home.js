@@ -5,14 +5,14 @@ import OrganizationList from "../organizations/OrganizationList";
 import WordAboutUs from "../home/WordAboutUs";
 import Connections from "../home/Connections";
 
-const Home = ({ programArray }) => (
+const Home = () => (
   <div>
-    <Hero prgArr={programArray} />
+    <Hero/>
     <div className="heroStyles">
-    <OrganizationList prgArr={programArray} />
+    <OrganizationList />
     </div>
     <WordAboutUs/>
-    <Connections prgArr={programArray}/>
+    <Connections/>
   </div>
 );
 

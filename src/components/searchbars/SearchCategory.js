@@ -1,12 +1,11 @@
 import React, {useState} from "react";
 import {
   InputGroup,
-  FormControl,
   Dropdown,
   DropdownButton,
 } from "react-bootstrap";
 
-const SearchCategory = ({prgArr}) => {
+const SearchCategory = ({prgArr, getVal}) => {
 	const [categoryChoice, setCategoryChoice] = useState('Categories');
 	const parseCurrentAvaliableCategories = () => {
 		let categoriesArr = prgArr.map(program => program.categories);
@@ -17,7 +16,10 @@ const SearchCategory = ({prgArr}) => {
 	return(
 		<InputGroup>
 			<DropdownButton
-				onSelect={(e) => setCategoryChoice(e)}
+				onSelect={(e) => {
+					getVal(valObj => ({...valObj, category: e}));
+					setCategoryChoice(e)
+				}}
 				as={InputGroup.Append}
 				variant='info'
 				title={categoryChoice}
