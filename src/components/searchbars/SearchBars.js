@@ -1,38 +1,46 @@
-import React from "react";
+import React, {useContext, useState} from "react";
 import {withRouter} from 'react-router-dom';
-import { Button, Form, FormGroup } from "react-bootstrap";
+import { fetchContext } from "../../fetchContext";
+import useFilterResults from "../../hooks/useFilterResults";
+
 
 import SearchCategory from "./SearchCategory";
 import SearchSeason from "./SearchSeason";
 import SearchLocation from "./SearchLocation";
 
+import { Button, Form } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-//
-// need to send back filter results from form groups 
-const SearchBars = ({prgArr, history}) => {
+
+const SearchBars = ({history}) => {
+	const [value, setValue] = useState({});
+	const contextArrays = useContext(fetchContext);
 	
-	const handleSubmit = () => {
+	
+	let programs = contextArrays.programs;
+	let filter = contextArrays.setFilteredProgramsArr;
+	
+	const filteredResults = useFilterResults(programs, value);
+	
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		filter(filteredResults)
 		history.push('/results');
-		console.log('hello', history );
-		// react router link to send user to results page 
-	}
-	
+	};
+	// console.log(value)	 fix multiple renders Please
 	return (
-		<Form inline>
-		<FormGroup>
-			<SearchCategory prgArr={prgArr} />
-		</FormGroup>
-		<FormGroup>
-			<SearchSeason prgArr={prgArr} />
-		</FormGroup>
-		<FormGroup>
-			<SearchLocation prgArr={prgArr} />
-		</FormGroup>
-		<Button onClick={handleSubmit}>
-			<FontAwesomeIcon icon={faSearch} />
-		</Button>
-	</Form>
+		<Form onSubmit={handleSubmit} inline>
+
+				<SearchCategory prgArr={programs} getVal={setValue} />
+		
+				<SearchLocation prgArr={programs} getVal={setValue} />
+		
+				<SearchSeason valArr={value} getVal={setValue} />
+
+			<Button type='submit'>
+				<FontAwesomeIcon icon={faSearch} />
+			</Button>
+		</Form>
 	);
 }
 
