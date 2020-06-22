@@ -39,7 +39,7 @@ const ShowPage = (props) => {
 
           <div className="row">
             <div className="col-lg-6"><span className="intro-lead">Season:</span></div>
-            <div className="col-lg-6">{program.start_season}</div>
+            <div className="col-lg-6">{program.start_season === 'N/A' ? 'Year-Round' : program.start_season}</div>
           </div>
 
           <div className="row">
