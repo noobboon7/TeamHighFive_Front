@@ -64,7 +64,7 @@
 
 .wordBtn{
   border-radius: 3em;
-  padding: 1em;
+  padding: .5em 1em;
 }
 
 .wordBtnSolid, .wordBtnOutline:hover {
@@ -145,4 +145,3 @@
   justify-content: center;
   width: 100%;
 }
-
