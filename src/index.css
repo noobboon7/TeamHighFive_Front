@@ -80,6 +80,11 @@ nav .navbar-nav .social-media a {
 /* .heroStyles .organizationList .organizationList-col:nth-of-type(1n+4) {
   display: none !important;
 } */
+.heroOrganizationSlider .slick-arrow {
+  z-index: 999;
+  width: auto;
+  height: auto;
+}
 .heroOrganizationSlider .slick-arrow:before {
   color: var(--color-blue-green);
   font-size: xx-large;
