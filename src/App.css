@@ -60,6 +60,7 @@
 
 .buttonDiv{
   display:flex;
+  flex-wrap: wrap;
 }
 
 .wordBtn{

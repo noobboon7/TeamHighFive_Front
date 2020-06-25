@@ -8,7 +8,7 @@ import Logo from "../static/youth_connection_logo.png";
 import NYCCodersLogo from "../static/nyc_coder.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
@@ -32,7 +32,8 @@ const Layout = ({ children }) => (
             <li className="list-inline-item"><Link to="/">Home</Link></li>
             <li className="list-inline-item"><Link to="/about">About</Link></li>
             <li className="list-inline-item"><Link to="/howItWorks">How it Works</Link></li>
-            <li className="list-inline-item"><a href="https://forms.gle/8UpNNNfrWh5Exnvd9">Add an Organization</a></li>
+            <li className="list-inline-item"><Link to="/">Programs</Link></li>
+            <li className="list-inline-item"><a href="/">Organization</a></li>
             <li className="list-inline-item"><Link to="/contact">Contact</Link></li>
 
           </ul>
@@ -43,6 +44,8 @@ const Layout = ({ children }) => (
             <FontAwesomeIcon icon={faTwitter} className="m-0" /></a></li>
             <li className="list-inline-item"><a href="#" className="m-0">
             <FontAwesomeIcon icon={faInstagram} className="m-0" /></a></li>
+            <li className="list-inline-item"><a href="https://forms.gle/8UpNNNfrWh5Exnvd9" className="m-0 text-dark">
+            <FontAwesomeIcon icon={faUser} className="ml-5" /></a></li>
           </ul>
         </Nav>
       </Navbar.Collapse>
