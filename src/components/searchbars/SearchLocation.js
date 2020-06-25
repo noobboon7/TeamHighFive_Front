@@ -1,8 +1,10 @@
 import React, {useState} from "react";
 import {
+  Col,
   InputGroup,
   Dropdown,
   DropdownButton,
+  ButtonGroup
 } from "react-bootstrap";
 
 const SearchLocation = ({prgArr, getVal }) => {
@@ -14,15 +16,16 @@ const SearchLocation = ({prgArr, getVal }) => {
     return locations;
   };
   return(
-      <InputGroup>
+      <Col md="3" className="p-0 searchbar-wrapper">
       <DropdownButton
         onSelect={(e) => {
           getVal(valObj => ({...valObj, location: e }));
           setLocation(e)}}
-        as={InputGroup.Append}
-        variant="info"
+        as={ButtonGroup}
+        variant="light"
         title={location}
         id="input-group-dropdown-2"
+        className="w-100"
       >
         {parseLocation().map((local, idx) => (
           <Dropdown.Item eventKey={local} key={idx}>
@@ -30,8 +33,8 @@ const SearchLocation = ({prgArr, getVal }) => {
           </Dropdown.Item>
         ))}
       </DropdownButton>
-        
-    </InputGroup>
+
+    </Col>
   )
 };
 
