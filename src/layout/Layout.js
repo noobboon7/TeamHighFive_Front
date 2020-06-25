@@ -17,7 +17,7 @@ const Layout = ({ children }) => (
   <div>
     <Navbar
       collapseOnSelect
-      color="light" expand="sm"
+      color="light" expand="lg"
       sticky="top"
       className="custom-navbar"
     >
