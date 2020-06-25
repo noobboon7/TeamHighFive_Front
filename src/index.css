@@ -8,6 +8,7 @@
   --color-med-blue: #6A8AA6;
   /* --color-med-blue: #FFC222; */
   --color-blue-green: #42C3D3;
+  --color-red: #D12764;
 }
 
 /* NOTE: Element Tag Styles */
@@ -76,8 +77,41 @@ nav .navbar-nav .social-media a {
 }
 
 /* NOTE: Card Styles */
-.heroStyles .organizationList .organizationList-col:nth-of-type(1n+4) {
+/* .heroStyles .organizationList .organizationList-col:nth-of-type(1n+4) {
   display: none !important;
+} */
+.heroOrganizationSlider .slick-arrow {
+  z-index: 999;
+  width: auto;
+  height: auto;
+}
+.heroOrganizationSlider .slick-prev {
+  left: -10px;
+}
+.heroOrganizationSlider .slick-next {
+  right: -10px;
+}
+.heroOrganizationSlider .slick-arrow:before {
+  color: var(--color-blue-green);
+  font-size: xx-large;
+}
+.heroOrganizationSlider .learnmore,
+.heroOrganizationSlider .learnmore:link,
+.heroOrganizationSlider .learnmore:visited,
+.heroOrganizationSlider .learnmore:hover {
+  color: var(--color-red);
+  font-weight: 700;
+}
+
+.word-about-us {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 1);
+  background-image: url('./static/word-about-us.jpg');
+}
+.word-about-us .word-about-us-body {
+  background-color: rgba(255, 255, 255, .85);
 }
 
 .card .card-footer.social-media {
@@ -109,7 +143,9 @@ nav .navbar-nav .social-media a {
 
 .wordBtn {
   /* border-radius: 10%; */
-  padding: 1em;
+  padding: .5em 1em;
+  margin-right: .5em;
+  font-size: .8em;
 }
 
 .wordBtnSolid, .wordBtnOutline:hover {

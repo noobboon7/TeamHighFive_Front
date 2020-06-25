@@ -34,24 +34,6 @@ const SearchCategory = ({ prgArr, getVal }) => {
           </Dropdown.Item>
         ))}
       </DropdownButton>
-
-      {
-        // <InputGroup>
-        // 	<DropdownButton
-        // 		onSelect={(e) => {
-        // 			getVal(valObj => ({...valObj, category: e}));
-        // 			setCategoryChoice(e)
-        // 		}}
-        // 		as={InputGroup.Append}
-        // 		variant='light'
-        // 		title={categoryChoice}
-        // 		id='input-group-dropdown-2'>
-        // 		{parseCurrentAvaliableCategories().map((program, idx) => (
-        // 			<Dropdown.Item eventKey={program} key={idx}>{program}</Dropdown.Item>
-        // 			))}
-        // 	</DropdownButton>
-        // </InputGroup>
-      }
     </Col>
   );
 };

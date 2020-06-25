@@ -26,7 +26,7 @@ const Connections = () => {
         <div className='connect-head-div'>
             <span className='intro-lead'>Prepare for Success</span>
         </div>
-        <div className='text-white'>
+        <div className='text-white text-center'>
             <h1>We're Pround of our Connections</h1>
         </div>
 
