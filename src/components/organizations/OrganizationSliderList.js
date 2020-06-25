@@ -13,8 +13,6 @@ const OrganizationSliderList = ({program}) => {
     return newString + "...";
   }
 
-
-
   return (
     <Col className="d-flex align-items-stretch organizationList-col">
       <Card className="border-0">

@@ -9,7 +9,7 @@ import Connections from "../home/Connections";
 const Home = () => (
   <div>
     <Hero/>
-    <div className="heroOrganizationSlider container mt-5">
+    <div className="heroOrganizationSlider container-fluid mt-5">
       <OrganizationSlider />
     </div>
 {
