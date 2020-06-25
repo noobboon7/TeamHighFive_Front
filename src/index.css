@@ -8,6 +8,7 @@
   --color-med-blue: #6A8AA6;
   /* --color-med-blue: #FFC222; */
   --color-blue-green: #42C3D3;
+  --color-red: #D12764;
 }
 
 /* NOTE: Element Tag Styles */
@@ -76,10 +77,20 @@ nav .navbar-nav .social-media a {
 }
 
 /* NOTE: Card Styles */
-.heroStyles .organizationList .organizationList-col:nth-of-type(1n+4) {
+/* .heroStyles .organizationList .organizationList-col:nth-of-type(1n+4) {
   display: none !important;
+} */
+.heroOrganizationSlider .slick-arrow:before {
+  color: var(--color-blue-green);
+  font-size: xx-large;
 }
-
+.heroOrganizationSlider .learnmore,
+.heroOrganizationSlider .learnmore:link,
+.heroOrganizationSlider .learnmore:visited,
+.heroOrganizationSlider .learnmore:hover {
+  color: var(--color-red);
+  font-weight: 700;
+}
 .card .card-footer.social-media {
   font-size: 1.55rem;
 }
