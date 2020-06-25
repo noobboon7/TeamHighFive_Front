@@ -83,6 +83,18 @@ nav .navbar-nav .social-media a {
 .card .card-footer.social-media {
   font-size: 1.55rem;
 }
+
+/* text-left d-flex justify-content-between align-items-center */
+.searchbar-wrapper button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0;
+}
+.searchbar-wrapper .dropdown-menu {
+  width: 100%;
+}
+
 /* NOTE: Contact Us */
 .contact-us {
   background-image: linear-gradient(
