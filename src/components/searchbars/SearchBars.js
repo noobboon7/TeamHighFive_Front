@@ -29,16 +29,21 @@ const SearchBars = ({history}) => {
 	};
 	// console.log(value)	 fix multiple renders Please
 	return (
-		<Form onSubmit={handleSubmit} inline className="w-100 justify-content-center">
-		<Row className="w-100 justify-content-center">
+		<Form onSubmit={handleSubmit} inline className="container-fluid justify-content-center">
+		<Row className="w-100 justify-content-center align-content-end flex-column mr-md-5	">
+				<h2 className="text-white">I am seeking...</h2>
 				<SearchCategory prgArr={programs} getVal={setValue} />
 
+				<h6 className="text-white mt-3">Filter by</h6>
 				<SearchLocation prgArr={programs} getVal={setValue} />
 
 				<SearchSeason valArr={value} getVal={setValue} />
 
-			<Button type='submit'>
-				<FontAwesomeIcon icon={faSearch} />
+			<Button type='submit' variant="dark">
+			{
+				// <FontAwesomeIcon icon={faSearch} />
+			}
+				<span class="text-uppercase">Search</span>
 			</Button>
 		</Row>
 		</Form>
