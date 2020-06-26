@@ -1,7 +1,7 @@
 import React from "react";
 
 import Hero from "../hero/Hero";
-import OrganizationList from "../organizations/OrganizationList";
+// import OrganizationList from "../organizations/OrganizationList";
 import OrganizationSlider from "../organizations/OrganizationSlider";
 import WordAboutUs from "../home/WordAboutUs";
 import Connections from "../home/Connections";
@@ -14,9 +14,7 @@ const Home = () => (
       <OrganizationSlider />
     </div>
 {
-    // <div className="heroStyles">
-    //   <OrganizationList />
-    // </div>
+  
 }
     <WordAboutUs/>
     <ImpactingPrograms/>

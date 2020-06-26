@@ -38,11 +38,11 @@ const Layout = ({ children }) => (
 
           </ul>
           <ul className="list-inline m-0 text-uppercase social-media">
-            <li className="list-inline-item"><a href="#" className="m-0">
+            <li className="list-inline-item"><a href="/" className="m-0">
             <FontAwesomeIcon icon={faFacebook} className="m-0" /></a></li>
-            <li className="list-inline-item"><a href="#" className="m-0">
+            <li className="list-inline-item"><a href="/" className="m-0">
             <FontAwesomeIcon icon={faTwitter} className="m-0" /></a></li>
-            <li className="list-inline-item"><a href="#" className="m-0">
+            <li className="list-inline-item"><a href="/" className="m-0">
             <FontAwesomeIcon icon={faInstagram} className="m-0" /></a></li>
             <li className="list-inline-item"><a href="https://forms.gle/8UpNNNfrWh5Exnvd9" className="m-0 text-dark">
             <FontAwesomeIcon icon={faUser} className="ml-5" /></a></li>
