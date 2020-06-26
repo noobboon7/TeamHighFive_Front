@@ -5,6 +5,7 @@ import OrganizationList from "../organizations/OrganizationList";
 import OrganizationSlider from "../organizations/OrganizationSlider";
 import WordAboutUs from "../home/WordAboutUs";
 import Connections from "../home/Connections";
+import ImpactingPrograms from "../home/ImpactingPrograms";
 
 const Home = () => (
   <div>
@@ -18,6 +19,7 @@ const Home = () => (
     // </div>
 }
     <WordAboutUs/>
+    <ImpactingPrograms/>
     <Connections/>
   </div>
 );
