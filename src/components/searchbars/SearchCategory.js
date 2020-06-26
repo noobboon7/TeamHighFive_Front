@@ -16,7 +16,7 @@ const SearchCategory = ({ prgArr, getVal }) => {
     return Array.from(categoriesArr);
   };
   return (
-    <Col md="3" className="p-0 searchbar-wrapper">
+    <Col md="5" className="p-0 searchbar-wrapper">
       <DropdownButton
         as={ButtonGroup}
         id="input-group-dropdown-2"

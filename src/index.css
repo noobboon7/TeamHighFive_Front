@@ -97,7 +97,7 @@ nav .navbar-nav .social-media a {
   right: -10px;
 }
 .heroOrganizationSlider .slick-arrow:before {
-  color: var(--color-blue-green);
+  color: var(--dark);
   font-size: xx-large;
 }
 .heroOrganizationSlider .learnmore,

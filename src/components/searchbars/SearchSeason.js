@@ -11,7 +11,7 @@ const SearchSeason = ({getVal,valObj}) => {
   const seasons = ['Summer', 'Spring', 'Fall', 'Winter', 'Year-round'];
   const [season, setSeason] = useState('Season');
 	return (
-		<Col md="3" className="p-0 searchbar-wrapper">
+		<Col md="5" className="p-0 searchbar-wrapper">
 			<DropdownButton
 				value='season'
 				onSelect={(e) => {
