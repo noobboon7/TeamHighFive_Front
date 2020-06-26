@@ -16,7 +16,7 @@ const SearchLocation = ({prgArr, getVal }) => {
     return locations;
   };
   return(
-      <Col md="3" className="p-0 searchbar-wrapper">
+      <Col md="5" className="p-0 searchbar-wrapper">
       <DropdownButton
         onSelect={(e) => {
           getVal(valObj => ({...valObj, location: e }));
