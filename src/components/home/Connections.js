@@ -1,17 +1,18 @@
-import React from "react";
+import React, {useContext} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
 import { faHandshake } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
-
+import {fetchContext} from '../../fetchContext'
 import CountUp from 'react-countup';
 
 
-const Connections = ({prgArr}) => {
-
+const Connections = () => {
+  const contextArrays = useContext(fetchContext);
+  let programs = contextArrays.programs;
     // const categoryCounts = () => {
-    //     let catArr = (prgArr.map(prg => prg.categories))
+    //     let catArr = (programs.map(prg => prg.categories))
     //     catArr = catArr.flat()
     //      catArr = catArr.reduce((acc, word) => {
     //         acc[word] = (acc[word] || 0) + 1
@@ -25,7 +26,7 @@ const Connections = ({prgArr}) => {
         <div className='connect-head-div'>
             <span className='intro-lead'>Prepare for Success</span>
         </div>
-        <div className='text-white'>
+        <div className='text-white text-center'>
             <h1>We're Pround of our Connections</h1>
         </div>
 
@@ -35,14 +36,14 @@ const Connections = ({prgArr}) => {
               <span className="counter-icon">
                 <FontAwesomeIcon icon={faCalendarAlt} className="m-0" />
               </span>
-              <p className="counter-number"><CountUp end={(prgArr.filter(prg=> prg.start_season === 'Summer' || prg.start_season === 'N/A')).length} duration={5} /></p>
+              <p className="counter-number"><CountUp end={(programs.filter(prg=> prg.start_season === 'Summer' || prg.start_season === 'N/A')).length} duration={5} /></p>
               <p className="counter-label">Summer Programs</p>
             </div>
             <div className="col-md-3 text-center">
               <span className="counter-icon">
                 <FontAwesomeIcon icon={faHandshake} className="m-0" />
               </span>
-              <p className="counter-number"><CountUp end={(prgArr.filter(prg=> prg.categories.includes('education') || prg.categories.includes('colleges') || prg.categories.includes('schools'))).length} duration={5} /></p>
+              <p className="counter-number"><CountUp end={(programs.filter(prg=> prg.categories.includes('education') || prg.categories.includes('colleges') || prg.categories.includes('schools'))).length} duration={5} /></p>
               <p className="counter-label">Educational Programs</p>
             </div>
 
@@ -57,7 +58,7 @@ const Connections = ({prgArr}) => {
               <span className="counter-icon">
                 <FontAwesomeIcon icon={faHeart} className="m-0" />
               </span>
-              <p className="counter-number"><CountUp end={(prgArr.filter(prg => prg.age_group === 'All' || parseInt(prg.age_group.split('-')[1]) < 16)).length} duration={5} /></p>
+              <p className="counter-number"><CountUp end={(programs.filter(prg => prg.age_group === 'All' || parseInt(prg.age_group.split('-')[1]) < 16)).length} duration={5} /></p>
               <p className="counter-label">Youth Programs</p>
             </div>
           </div>

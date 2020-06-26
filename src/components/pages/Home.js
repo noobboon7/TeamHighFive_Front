@@ -2,17 +2,25 @@ import React from "react";
 
 import Hero from "../hero/Hero";
 import OrganizationList from "../organizations/OrganizationList";
+import OrganizationSlider from "../organizations/OrganizationSlider";
 import WordAboutUs from "../home/WordAboutUs";
 import Connections from "../home/Connections";
+import ImpactingPrograms from "../home/ImpactingPrograms";
 
-const Home = ({ programArray }) => (
+const Home = () => (
   <div>
-    <Hero prgArr={programArray} />
-    <div className="heroStyles">
-    <OrganizationList prgArr={programArray} />
+    <Hero/>
+    <div className="heroOrganizationSlider container-fluid mt-5">
+      <OrganizationSlider />
     </div>
+{
+    // <div className="heroStyles">
+    //   <OrganizationList />
+    // </div>
+}
     <WordAboutUs/>
-    <Connections prgArr={programArray}/>
+    <ImpactingPrograms/>
+    <Connections/>
   </div>
 );
 
