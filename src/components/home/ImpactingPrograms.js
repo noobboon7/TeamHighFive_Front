@@ -2,7 +2,7 @@ import React from "react";
 
 const ImpactingPrograms = () => (
     <div className="bg-white container-fluid py-2 py-4 my-4">
-      <h2 className="text-center mb-4">Connect to Impacting Program</h2>
+      <h2 className="text-center mb-4">Connect to Impacting Programs</h2>
         <div className="container">
           <div className="impacting-wrapper">
             <div className="impacting-program">
