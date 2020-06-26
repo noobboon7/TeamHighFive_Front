@@ -9,8 +9,7 @@ import SearchSeason from "./SearchSeason";
 import SearchLocation from "./SearchLocation";
 
 import { Row, Button, Form } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+
 
 const SearchBars = ({history}) => {
 	const [value, setValue] = useState({});
