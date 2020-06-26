@@ -1,5 +1,4 @@
 import React from "react";
-import teamDreamers from "../../static/teamDreamers.png";
 
 const WordAboutUs = () => (
     <div className='container-fluid bg-white p-5 mt-5 word-about-us'>
