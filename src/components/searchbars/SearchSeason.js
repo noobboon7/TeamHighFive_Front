@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import {
 	Col,
-	InputGroup,
   Dropdown,
   DropdownButton,
 	ButtonGroup
