@@ -206,6 +206,10 @@ nav .navbar-nav .social-media a {
 .searchbar-wrapper .dropdown-menu {
   width: 100%;
 }
+.searchbar-wrapper .dropdown-menu.show {
+  max-height: 200px;
+  overflow: auto;
+}
 
 /* NOTE: Contact Us */
 .contact-us {
