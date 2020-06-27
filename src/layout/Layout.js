@@ -38,7 +38,6 @@ const Layout = ({ children }) => (
 
             <li className="list-inline-item"><Link to="/">Home</Link></li>
             <li className="list-inline-item"><Link to="/about">About</Link></li>
-            <li className="list-inline-item"><Link to="/howItWorks">How it Works</Link></li>
             <li className="list-inline-item"><Link to="/">Programs</Link></li>
             <li className="list-inline-item"><a href="/">Organization</a></li>
             <li className="list-inline-item"><Link to="/contact">Contact</Link></li>
