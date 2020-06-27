@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
+
 import { Navbar, Nav, Container, Row, Col } from "react-bootstrap";
 import Footer from "../styled-components/Footer";
 // import styles from "./Layout.module.css";
@@ -15,6 +17,11 @@ import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const Layout = ({ children }) => (
   <div>
+    <Helmet>
+      <title>Welcome to Youth Connection!</title>
+      <meta name="description" content="Welcome to Youth Connection! The mission is to make extracurricular (specifically non-profit) organizations and programs more accessible and reachable to the youth." />
+      <body class="homepage" />
+    </Helmet>
     <Navbar
       collapseOnSelect
       color="light" expand="lg"
