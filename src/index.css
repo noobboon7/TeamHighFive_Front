@@ -108,14 +108,14 @@ nav .navbar-nav .social-media a {
   font-weight: 700;
 }
 
-.word-about-us {
+.how-it-works {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgba(255, 255, 255, 1);
-  background-image: url('./static/home/word-about-us.jpg');
+  background-image: url('./static/home/connecting-youth.jpg');
 }
-.word-about-us .word-about-us-body {
+.how-it-works .how-it-works-body {
   background-color: rgba(255, 255, 255, .85);
 }
 
