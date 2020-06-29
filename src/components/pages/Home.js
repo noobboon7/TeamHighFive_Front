@@ -13,9 +13,7 @@ const Home = () => (
     <div className="heroOrganizationSlider container-fluid mt-5">
       <OrganizationSlider />
     </div>
-{
 
-}
     <HowItWorks/>
     <ImpactingPrograms/>
     <Connections/>

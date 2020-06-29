@@ -3,7 +3,7 @@ import styles from "./Hero.module.css";
 import SearchBars from "../searchbars/SearchBars";
 
 const Hero = () => (
-  <div id={styles.heroStyles} className="d-flex justify-content-center align-items-center">
+  <div id={styles.heroStyles} className="d-flex align-items-center">
     <SearchBars />
   </div>
 );

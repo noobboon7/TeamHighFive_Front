@@ -8,13 +8,12 @@ import SearchCategory from "./SearchCategory";
 import SearchSeason from "./SearchSeason";
 import SearchLocation from "./SearchLocation";
 
-import { Row, Button, Form } from "react-bootstrap";
+import { Row, Col, Button, Form } from "react-bootstrap";
 
 
 const SearchBars = ({history}) => {
 	const [value, setValue] = useState({});
 	const contextArrays = useContext(fetchContext);
-
 
 	let programs = contextArrays.programs;
 	let filter = contextArrays.setFilteredProgramsArr;
@@ -28,22 +27,23 @@ const SearchBars = ({history}) => {
 	};
 	// console.log(value)	 fix multiple renders Please
 	return (
-		<Form onSubmit={handleSubmit} inline className="container-fluid justify-content-center">
-		<Row className="w-100 justify-content-center align-content-end flex-column mr-md-5	">
-				<h2 className="text-white">I am seeking...</h2>
+		<Form onSubmit={handleSubmit} inline className="container-fluid">
+		<Row className="w-100 align-content-end flex-column mx-auto">
+				<Col md="5" className="p-0"><h2 className="text-white">I am seeking...</h2></Col>
 				<SearchCategory prgArr={programs} getVal={setValue} />
 
-				<h6 className="text-white mt-3">Filter by</h6>
+				<Col md="5" className="p-0"><h6 className="text-white mt-3">Filter by</h6></Col>
 				<SearchLocation prgArr={programs} getVal={setValue} />
 
 				<SearchSeason valArr={value} getVal={setValue} />
-
-			<Button type='submit' variant="dark">
-			{
-				// <FontAwesomeIcon icon={faSearch} />
-			}
-				<span class="text-uppercase">Search</span>
-			</Button>
+				<Col md="5" className="p-0 searchbar-wrapper">
+					<Button type='submit' variant="dark" className="w-100">
+					{
+						// <FontAwesomeIcon icon={faSearch} />
+					}
+						<span class="text-uppercase m-auto">Search</span>
+					</Button>
+				</Col>
 		</Row>
 		</Form>
 	);

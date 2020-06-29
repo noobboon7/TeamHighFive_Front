@@ -33,7 +33,7 @@ const Layout = ({ children }) => (
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="navbarNav">
-        <Nav className="d-flex justify-content-around  w-100">
+        <Nav className="d-flex justify-content-around w-100">
           <ul className="list-inline m-0 text-uppercase">
 
             <li className="list-inline-item"><Link to="/">Home</Link></li>
