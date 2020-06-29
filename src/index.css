@@ -122,12 +122,16 @@ nav .navbar-nav .social-media a {
 .impacting-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr ) ;
+  grid-template-rows: repeat(2,  30ch ) ;
   grid-gap: 1em;
 }
 /* NOTE: Media Query */
 @media only screen and (max-width: 768px) {
   .impacting-wrapper {
     grid-template-columns: repeat(2, 1fr ) ;
+  }
+  nav.custom-navbar {
+    position: relative;
   }
 }
 @media only screen and (max-width: 414px) {
