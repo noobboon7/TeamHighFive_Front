@@ -1,8 +1,8 @@
 import React from "react";
 
 
-import {Col,Card, Button} from "react-bootstrap";
-import {Link} from 'react-router-dom'
+import {Col,Card} from "react-bootstrap";
+// import {Link} from 'react-router-dom'
 
 
 //add color "info" to button and height
@@ -23,8 +23,6 @@ const OrganizationSliderList = ({program}) => {
             <Card.Link className="mx-0 learnmore" href = {program.url}>
               Learn More
             </Card.Link>
-
-
         </Card.Body >
       </Card>
     </Col>

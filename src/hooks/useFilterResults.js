@@ -1,5 +1,3 @@
-import React from 'react';
-
 const useFilterResults = (programs, { category, location, season }) => {
 	console.log(category, location, season);
 	return programs.filter((program) => {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 
 import Layout from "./layout/Layout";
@@ -32,7 +32,6 @@ function App() {
 					setOrganizations(organizations);
 				});
 		}
-		return console.log('cleaning up'), console.count();
 	}, [programs, organizations]);
 
 
