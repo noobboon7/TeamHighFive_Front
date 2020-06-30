@@ -16,8 +16,13 @@ function App() {
 	const [programs, setPrograms] = useState([]);
 	const [organizations, setOrganizations] = useState([]);
 	const [filteredProgramsArr, setFilteredProgramsArr] = useState([]);
-	
+
 	useEffect(() => {
+		if(sessionStorage){
+			let arr = JSON.parse(sessionStorage.getItem("userSelects2"));
+			setFilteredProgramsArr(arr)
+			clg
+		}
 		if (programs.length < 1) {
 			fetch("https://connection-youth.herokuapp.com/programs")
 				.then((res) => res.json())

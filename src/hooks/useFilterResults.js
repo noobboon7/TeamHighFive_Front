@@ -1,12 +1,20 @@
 const useFilterResults = (programs, { category, location, season }) => {
 	console.log(category, location, season);
-	return programs.filter((program) => {
-		return (
-			program.start_season === season ||
-			program.categories.some((el) => el === category) ||
-			program.location === location
-		);
+	let filteredCategories = programs.filter((program) => {
+		return program.categories.some((el) => el === category) 
 	});
+	if(season || location){
+		// console.table(filteredCategories)
+		return filteredCategories.filter((program) => {
+			return (
+				program.start_season === season ||
+				program.location === location
+				);
+			});
+		}else {
+			// sessionStorage.setItem('userSelects', JSON.stringify(filteredCategories))
+			return filteredCategories
+		}
 };
 
 export default useFilterResults;
