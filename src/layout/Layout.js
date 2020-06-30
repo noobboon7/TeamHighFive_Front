@@ -18,6 +18,23 @@ import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const Layout = ({ children }) => {
   const [hidden, setHidden] = useState(true);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("Email & Password: ", email, password);
+  };
+
+  const handleEmail = (event) => {
+    setEmail(event.target.value);
+    console.log(email);
+  };
+
+  const handlePassword = (event) => {
+    setPassword(event.target.value);
+    console.log(password);
+  };
 
   return (
     <div>
@@ -89,7 +106,14 @@ const Layout = ({ children }) => {
             </ul>
             {!hidden && (
               <div className="login">
-                <Login setHidden={() => setHidden} />
+                <Login
+                  setHidden={() => setHidden}
+                  handleSubmit={handleSubmit}
+                  handleEmail={handleEmail}
+                  handlePassword={handlePassword}
+                  email={email}
+                  password={password}
+                />
               </div>
             )}
           </Nav>

@@ -1,7 +1,14 @@
 import React, { useState } from "react";
-import { Card, InputGroup, Button, FormControl } from "react-bootstrap";
+import { Card, InputGroup, Button, FormControl, Form } from "react-bootstrap";
 
-const Login = ({ setHidden }) => {
+const Login = ({
+  setHidden,
+  handleSubmit,
+  handleEmail,
+  handlePassword,
+  email,
+  password,
+}) => {
   return (
     <Card style={{ width: "18rem" }}>
       <Card.Body>
@@ -10,22 +17,32 @@ const Login = ({ setHidden }) => {
         </div>
         <Card.Title>Organization Login</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-        <InputGroup size="sm" className="mb-3">
-          <FormControl
-            aria-label="Small"
-            aria-describedby="inputGroup-sizing-sm"
-            placeholder="Email"
-          />
-        </InputGroup>
-        <InputGroup size="sm" className="mb-3">
-          <FormControl
-            aria-label="Small"
-            aria-describedby="inputGroup-sizing-sm"
-            placeholder="Password"
-          />
-        </InputGroup>
-        <Button href="#">Login</Button>
-        <Card.Link href="https://forms.gle/8UpNNNfrWh5Exnvd9">
+        <Form onSubmit={handleSubmit}>
+          <InputGroup size="sm" className="mb-3">
+            <FormControl
+              aria-label="Small"
+              type="email"
+              aria-describedby="inputGroup-sizing-sm"
+              placeholder="Email"
+              name="email"
+              onChange={handleEmail}
+              value={email}
+            />
+          </InputGroup>
+          <InputGroup size="sm" className="mb-3">
+            <FormControl
+              aria-label="Small"
+              type="password"
+              aria-describedby="inputGroup-sizing-sm"
+              placeholder="Password"
+              name="password"
+              onChange={handlePassword}
+              value={password}
+            />
+          </InputGroup>
+          <Button type="submit">Login</Button>
+        </Form>
+        <Card.Link href="https://forms.gle/8UpNNNfrWh5Exnvd9" target="_blank">
           Register
         </Card.Link>
       </Card.Body>
