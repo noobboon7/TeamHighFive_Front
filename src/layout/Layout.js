@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
+
 import { Navbar, Nav, Container, Row, Col } from "react-bootstrap";
 import Footer from "../styled-components/Footer";
 // import styles from "./Layout.module.css";
@@ -15,6 +17,11 @@ import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const Layout = ({ children }) => (
   <div>
+    <Helmet>
+      <title>Welcome to Youth Connection!</title>
+      <meta name="description" content="Welcome to Youth Connection! The mission is to make extracurricular (specifically non-profit) organizations and programs more accessible and reachable to the youth." />
+      <body class="homepage" />
+    </Helmet>
     <Navbar
       collapseOnSelect
       color="light" expand="lg"
@@ -26,14 +33,13 @@ const Layout = ({ children }) => (
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="navbarNav">
-        <Nav className="d-flex justify-content-around  w-100">
+        <Nav className="d-flex justify-content-around w-100">
           <ul className="list-inline m-0 text-uppercase">
 
             <li className="list-inline-item"><Link to="/">Home</Link></li>
             <li className="list-inline-item"><Link to="/about">About</Link></li>
-            <li className="list-inline-item"><Link to="/howItWorks">How it Works</Link></li>
             <li className="list-inline-item"><Link to="/">Programs</Link></li>
-            <li className="list-inline-item"><a href="/">Organization</a></li>
+            <li className="list-inline-item"><Link to="/">Organization</Link></li>
             <li className="list-inline-item"><Link to="/contact">Contact</Link></li>
 
           </ul>
