@@ -21,13 +21,15 @@ function App() {
 		if(sessionStorage){
 			let arr = JSON.parse(sessionStorage.getItem("userSelects2"));
 			setFilteredProgramsArr(arr)
-			clg
+			console.log(sessionStorage)
 		}
 		if (programs.length < 1) {
+			console.count('set:')
 			fetch("https://connection-youth.herokuapp.com/programs")
 				.then((res) => res.json())
 				.then((programs) => {
 					setPrograms(programs);
+					sessionStorage.setItem('allPrograms', JSON.stringify(programs))
 				});
 		}
 		if (organizations.length < 1) {
