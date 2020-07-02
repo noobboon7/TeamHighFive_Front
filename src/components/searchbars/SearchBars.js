@@ -19,6 +19,7 @@ const SearchBars = ({history}) => {
 	let filter = contextArrays.setFilteredProgramsArr;
 
 	const filteredResults = useFilterResults(programs, value);
+
 	
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -28,21 +29,35 @@ const SearchBars = ({history}) => {
 	};
 
 	return (
-		<Form onSubmit={handleSubmit} inline className="container-fluid">
-		<Row className="w-100 align-content-end flex-column mx-auto">
-				<Col md="5" className="p-0"><h2 className="text-white">I am seeking...</h2></Col>
+		<Form onSubmit={handleSubmit} inline className='container-fluid'>
+			<Row className='w-100 align-content-end flex-column mx-auto'>
+				<Col md='5' className='p-0'>
+					<h2 className='text-white'>I am seeking...</h2>
+				</Col>
 				<SearchCategory prgArr={programs} getVal={setValue} />
-
-				<Col md="5" className="p-0"><h6 className="text-white mt-3">Filter by</h6></Col>
-				<SearchLocation prgArr={programs} getVal={setValue} />
-
-				<SearchSeason valArr={value} getVal={setValue} />
-				<Col md="5" className="p-0 searchbar-wrapper">
-					<Button type='submit' variant="dark" className="w-100">
-						<span className="text-uppercase m-auto">Search</span>
+				<Col md='5' className='p-0'>
+					<h6 className='text-white mt-3'>Filter by</h6>
+				</Col>
+				<SearchLocation
+					prgArr={programs}
+					getVal={setValue}
+					disable={!filteredResults.length}
+				/>
+				<SearchSeason
+					valArr={value}
+					getVal={setValue}
+					disable={!filteredResults.length}
+				/>
+				<Col md='5' className='p-0 searchbar-wrapper'>
+					<Button
+						disabled={!filteredResults.length}
+						type='submit'
+						variant='dark'
+						className='w-100'>
+						<span className='text-uppercase m-auto'>Search</span>
 					</Button>
 				</Col>
-		</Row>
+			</Row>
 		</Form>
 	);
 }

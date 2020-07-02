@@ -21,7 +21,6 @@ function App() {
 		if(sessionStorage){
 			let arr = JSON.parse(sessionStorage.getItem("userSelects2"));
 			setFilteredProgramsArr(arr)
-			clg
 		}
 		if (programs.length < 1) {
 			fetch("https://connection-youth.herokuapp.com/programs")

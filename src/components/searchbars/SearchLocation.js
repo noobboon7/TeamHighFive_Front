@@ -6,7 +6,7 @@ import {
   ButtonGroup
 } from "react-bootstrap";
 
-const SearchLocation = ({prgArr, getVal }) => {
+const SearchLocation = ({prgArr, getVal, disable}) => {
   const [location, setLocation] = useState('Location');
   const parseLocation = () => {
     let locations = prgArr.map(program => program.location);
@@ -17,6 +17,7 @@ const SearchLocation = ({prgArr, getVal }) => {
   return(
       <Col md="5" className="p-0 searchbar-wrapper">
       <DropdownButton
+        disabled={disable}
         onSelect={(e) => {
           getVal(valObj => ({...valObj, location: e }));
           setLocation(e)}}
