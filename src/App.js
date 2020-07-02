@@ -21,7 +21,7 @@ function App() {
 		if(sessionStorage){
 			let arr = JSON.parse(sessionStorage.getItem("userSelects2"));
 			setFilteredProgramsArr(arr)
-			console.log(sessionStorage)
+			// console.log(sessionStorage)
 		}
 		if (programs.length < 1) {
 			console.count('set:')
@@ -58,7 +58,7 @@ function App() {
 						exact
 						path='/results'
 						render={(routerProps) => (
-							<Results prgArray={filteredProgramsArr} />
+							<Results allPrograms={programs} homeFilterArr={filteredProgramsArr} />
 						)}
 						/>
 					<Route
