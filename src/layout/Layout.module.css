@@ -5,8 +5,7 @@
 }
 
 .login {
-  display: flex;
-  justify-content: flex-end;
+  position: absolute;
 }
 
 a {
