@@ -124,8 +124,11 @@ const Layout = ({ children }) => {
                       <Form.Label>Password</Form.Label>
                       <Form.Control type="password" placeholder="Password" />
                     </Form.Group>
+                    <Form.Group controlId="formRequest">
+                    <Button variant="link">forgot password/username?</Button>
+                    </Form.Group>
                     <Form.Group controlId="formBasicCheckbox">
-                      <Form.Check type="checkbox" label="Check me out" />
+                      <Form.Check type="checkbox" label="Remember me" />
                     </Form.Group>
                   </Form>
                   </Modal.Body>
