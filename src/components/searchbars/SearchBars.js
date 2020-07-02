@@ -19,7 +19,7 @@ const SearchBars = ({history}) => {
 	let filter = contextArrays.setFilteredProgramsArr;
 
 	const filteredResults = useFilterResults(programs, value);
-
+	console.log(!filteredResults.length)
 
 	const handleSubmit = (e) => {
 		e.preventDefault();

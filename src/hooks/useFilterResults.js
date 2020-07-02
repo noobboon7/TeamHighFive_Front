@@ -5,6 +5,7 @@ const useFilterResults = (programs, { category, location, season }) => {
 	});
 	if(season || location){
 		// console.table(filteredCategories)
+		season = season === 'Year-Round' ? 'N/A': season 
 		return filteredCategories.filter((program) => {
 			return (
 				program.start_season === season ||
