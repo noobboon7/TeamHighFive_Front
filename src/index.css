@@ -69,6 +69,9 @@ nav.custom-navbar {
 nav.custom-navbar .list-inline-item:not(:last-child) {
   margin-right: 2rem;
 }
+nav .navbar-nav {
+  position: relative;
+}
 nav .navbar-nav a,
 nav .navbar-nav a:link,
 nav .navbar-nav a:visited {
@@ -79,6 +82,15 @@ nav .navbar-nav a:hover {
 }
 nav .navbar-nav .social-media a {
   color: var(--color-med-blue);
+}
+nav .navbar-nav .login {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.login-modal,
+nav .navbar-nav .login .close {
+  cursor: pointer;
 }
 
 /* NOTE: Card Styles */
