@@ -35,6 +35,7 @@ function App() {
 				.then((organizations) => {
 					setOrganizations(organizations);
 				});
+				return 
 		}
 	}, [programs, organizations]);
 

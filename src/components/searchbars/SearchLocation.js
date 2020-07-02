@@ -8,12 +8,13 @@ import {
 
 const SearchLocation = ({prgArr, getVal, disable}) => {
   const [location, setLocation] = useState('Location');
+
   const parseLocation = () => {
     let locations = prgArr.map(program => program.location);
     locations = new Set(locations);
-    locations = Array.from(locations);
-    return locations;
+    return [...locations];
   };
+
   return(
       <Col md="5" className="p-0 searchbar-wrapper">
       <DropdownButton

@@ -2,9 +2,6 @@ import React, { useContext } from "react";
 import {fetchContext} from '../../fetchContext'
 import OrganizationSliderList from "./OrganizationSliderList";
 
-// https://www.npmjs.com/package/react-slick
-// npm install react-slick --save
-// npm install slick-carousel
 // https://kenwheeler.github.io/slick/
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -29,12 +26,13 @@ const OrganizationSlider = () => {
   };
   const contextArrays = useContext(fetchContext);
 	let organizations = contextArrays.organizations;
-
+  
+  // console warnings, slider needs a ref:findDOMNode is deprecated in StrictMode
   return (
     <Slider {...settings}>
     {
       organizations.slice(0,5).map((program, idx) => (
-      <OrganizationSliderList key={idx} program = {program}/>
+        <OrganizationSliderList key={idx} program = {program}/>
       ))
     }
   </Slider>

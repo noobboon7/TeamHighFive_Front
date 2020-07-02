@@ -20,7 +20,7 @@ const SearchBars = ({history}) => {
 
 	const filteredResults = useFilterResults(programs, value);
 
-	
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		filter(filteredResults)
@@ -39,12 +39,12 @@ const SearchBars = ({history}) => {
 					<h6 className='text-white mt-3'>Filter by</h6>
 				</Col>
 				<SearchLocation
-					prgArr={programs}
+					prgArr={filteredResults}
 					getVal={setValue}
 					disable={!filteredResults.length}
 				/>
 				<SearchSeason
-					valArr={value}
+					prgArr={filteredResults}
 					getVal={setValue}
 					disable={!filteredResults.length}
 				/>

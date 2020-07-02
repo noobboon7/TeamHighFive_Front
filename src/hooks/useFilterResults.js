@@ -1,5 +1,5 @@
 const useFilterResults = (programs, { category, location, season }) => {
-	console.log(category, location, season);
+	// console.log(category, location, season);
 	let filteredCategories = programs.filter((program) => {
 		return program.categories.some((el) => el === category) 
 	});
