@@ -19,7 +19,12 @@ const SearchBars = ({history}) => {
 	let filter = contextArrays.setFilteredProgramsArr;
 
 	const filteredResults = useFilterResults(programs, value);
-	console.log(!filteredResults.length)
+	/*
+	 user should be able to switch back to category and have no filtered 
+	 results, there is a bug when you choose a location or season you cannot
+	 see previous choices. thats whats need to get fixed next
+	 then session storage all data to enhance user experience 
+	 */ 
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
