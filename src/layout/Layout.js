@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 import { Navbar, Nav, Container, Row, Col } from "react-bootstrap";
+import { Modal, Form, Button } from "react-bootstrap";
 import Footer from "../styled-components/Footer";
 import Login from "../components/login/Login";
 // import styles from "./Layout.module.css";
@@ -20,6 +21,10 @@ const Layout = ({ children }) => {
   const [hidden, setHidden] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -97,6 +102,51 @@ const Layout = ({ children }) => {
                 <a href="/" className="m-0">
                   <FontAwesomeIcon icon={faInstagram} className="m-0" />
                 </a>
+              </li>
+              <li className="list-inline-item">
+                <span className="m-0 text-dark login-modal" onClick={handleShow}>
+                  <FontAwesomeIcon icon={faUser} className="ml-5" />&nbsp;Login
+                </span>
+
+                <Modal
+                show={show}
+                onHide={handleClose}
+                backdrop="static"
+                keyboard={false}
+                >
+                  <Modal.Header closeButton>
+                    <Modal.Title>Organization Login</Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                  <Form>
+                    <Form.Group controlId="formBasicEmail">
+                      <Form.Label>Email address</Form.Label>
+                      <Form.Control type="email" placeholder="Enter email" />
+                      <Form.Text className="text-muted">
+                        We'll never share your email with anyone else.
+                      </Form.Text>
+                    </Form.Group>
+                    <Form.Group controlId="formBasicPassword">
+                      <Form.Label>Password</Form.Label>
+                      <Form.Control type="password" placeholder="Password" />
+                    </Form.Group>
+                    <Form.Group controlId="formRequest">
+                    <Button variant="link">forgot password/username?</Button>
+                    </Form.Group>
+                    <Form.Group controlId="formBasicCheckbox">
+                      <Form.Check type="checkbox" label="Remember me" />
+                    </Form.Group>
+                  </Form>
+                  </Modal.Body>
+                  <Modal.Footer>
+                    <Button variant="secondary">
+                      Login
+                    </Button>
+                    <Button variant="primary">
+                      Register
+                    </Button>
+                  </Modal.Footer>
+                </Modal>
               </li>
               <li className="list-inline-item">
                 <div className="m-0 text-dark" onClick={() => setHidden(false)}>
