@@ -107,7 +107,13 @@ const Layout = ({ children }) => {
                 <span className="m-0 text-dark login-modal" onClick={handleShow}>
                   <FontAwesomeIcon icon={faUser} className="ml-5" />&nbsp;Login
                 </span>
-                <Modal show={show} onHide={handleClose} animation={false}>
+
+                <Modal
+                show={show}
+                onHide={handleClose}
+                backdrop="static"
+                keyboard={false}
+                >
                   <Modal.Header closeButton>
                     <Modal.Title>Organization Login</Modal.Title>
                   </Modal.Header>
