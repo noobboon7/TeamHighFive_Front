@@ -16,13 +16,20 @@ function App() {
 	const [programs, setPrograms] = useState([]);
 	const [organizations, setOrganizations] = useState([]);
 	const [filteredProgramsArr, setFilteredProgramsArr] = useState([]);
-	
+
 	useEffect(() => {
+		if(sessionStorage){
+			let arr = JSON.parse(sessionStorage.getItem("userSelects2"));
+			setFilteredProgramsArr(arr)
+			// console.log(sessionStorage)
+		}
 		if (programs.length < 1) {
+			console.count('set:')
 			fetch("https://connection-youth.herokuapp.com/programs")
 				.then((res) => res.json())
 				.then((programs) => {
 					setPrograms(programs);
+					sessionStorage.setItem('allPrograms', JSON.stringify(programs))
 				});
 		}
 		if (organizations.length < 1) {
@@ -51,7 +58,7 @@ function App() {
 						exact
 						path='/results'
 						render={(routerProps) => (
-							<Results prgArray={filteredProgramsArr} />
+							<Results allPrograms={programs} homeFilterArr={filteredProgramsArr} />
 						)}
 						/>
 					<Route

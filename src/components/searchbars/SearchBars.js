@@ -19,13 +19,14 @@ const SearchBars = ({history}) => {
 	let filter = contextArrays.setFilteredProgramsArr;
 
 	const filteredResults = useFilterResults(programs, value);
-
+	
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		filter(filteredResults)
+		sessionStorage.setItem('userSelects2', JSON.stringify(filteredResults))
 		history.push('/results');
 	};
-	// console.log(value)	 fix multiple renders Please
+
 	return (
 		<Form onSubmit={handleSubmit} inline className="container-fluid">
 		<Row className="w-100 align-content-end flex-column mx-auto">
@@ -38,10 +39,7 @@ const SearchBars = ({history}) => {
 				<SearchSeason valArr={value} getVal={setValue} />
 				<Col md="5" className="p-0 searchbar-wrapper">
 					<Button type='submit' variant="dark" className="w-100">
-					{
-						// <FontAwesomeIcon icon={faSearch} />
-					}
-						<span class="text-uppercase m-auto">Search</span>
+						<span className="text-uppercase m-auto">Search</span>
 					</Button>
 				</Col>
 		</Row>
