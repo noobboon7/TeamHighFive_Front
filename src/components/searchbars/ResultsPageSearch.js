@@ -3,8 +3,8 @@ import { Col, Form} from "react-bootstrap";
 
 const ResultsPageSearchBar = () => (
 
-  <Form className="px-5">
-			<h6 className='text-black mt-3'>Filter by</h6>
+  <Form>
+			<h6 className='text-black'>Filter by</h6>
 			  <Form.Row>
 					<Form.Group as={Col} md="4">
 						<Form.Label for="byCategories">Category</Form.Label>

@@ -6,7 +6,8 @@ import ResultsPageSearch from '../searchbars/ResultsPageSearch'
 import ProgramsList from "../programsList";
 
 import { Container, Row, Col, Badge, Button, ListGroup} from "react-bootstrap";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faList, faTh } from "@fortawesome/free-solid-svg-icons";
 
 const Results = ({ allPrograms, homeFilterArr }) => {
 	const [value, setValue] = useState({});
@@ -25,37 +26,31 @@ const Results = ({ allPrograms, homeFilterArr }) => {
 			{
 				//   <SearchLocation prgArr={allPrograms} getVal={setValue}/>
 			}
+			<Container fluid className="p-5 bg-info text-light mb-4">
+				<Container>
+					<ResultsPageSearch />
+				</Container>
 
-			<ResultsPageSearch />
-			<Container className="mb-5">
-				<ListGroup horizontal>
-					<ListGroup.Item className="border-0"><Button variant="">
-					Sports <Badge variant="light">x</Badge>
-					</Button></ListGroup.Item>
-					<ListGroup.Item className="border-0"><Button variant="outline-dark">
-					Education <Badge variant="light">x</Badge>
-					</Button></ListGroup.Item>
-				</ListGroup>
+				<Container>
+					<ListGroup horizontal>
+						<ListGroup.Item className="border-0 p-0 mr-1"><Button variant="outline-dark">
+						Sports <Badge variant="light">x</Badge>
+						</Button></ListGroup.Item>
+						<ListGroup.Item className="border-0 p-0 mr-1"><Button variant="outline-dark">
+						Education <Badge variant="light">x</Badge>
+						</Button></ListGroup.Item>
+					</ListGroup>
+				</Container>
 			</Container>
 
-			<Container>
-			<Row xs={2} md={4} lg={6}>
-				<Col>
-					<Button variant="outline-dark">
-					Sports <Badge variant="light">x</Badge>
+			<Container className="text-right">
+					<Button variant="outline-info">
+						  <FontAwesomeIcon icon={faList} className="m-0" />
 					</Button>
-				</Col>
-				<Col>
-					<Button variant="outline-dark">
-					Education <Badge variant="light">x</Badge>
+					&nbsp;
+					<Button variant="outline-info">
+						<FontAwesomeIcon icon={faTh} className="m-0" />
 					</Button>
-				</Col>
-				<Col>
-					<Button variant="outline-dark">
-					Brooklyn <Badge variant="light">x</Badge>
-					</Button>
-				</Col>
-			</Row>
 			</Container>
 			<ProgramsList
 				prgArr={allPrograms}
