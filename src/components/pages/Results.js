@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import useFilterResults from "../../hooks/useFilterResults";
-import ResultsPageSearch from '../searchbars/ResultsPageSearch'
+import ResultsPageSearch from '../searchbars/ResultsPageSearch';
 
-import SearchLocation from "../searchbars/SearchLocation";
+// import SearchLocation from "../searchbars/SearchLocation";
 import ProgramsList from "../programsList";
 
 import { Container, Row, Col, Badge, Button, ListGroup} from "react-bootstrap";
@@ -15,30 +15,30 @@ const Results = ({ allPrograms, homeFilterArr }) => {
   let homeFilterChoice = JSON.parse(sessionStorage.getItem('userSelects2'));
 	const filteredResults = useFilterResults(allPrograms, value);
 
-  // console.log(('results',filteredResults||'home:',homeFilterChoice))
+  // console.log(allPrograms)
 
   return (
 		<>
-			{/* <Button variant='primary'>
-				Profile <Badge variant='light'>9</Badge>
-				<span className='sr-only'>unread messages</span>
-			</Button> */}
 			{
-				  <SearchLocation prgArr={allPrograms} getVal={setValue}/>
+				// <SearchLocation prgArr={allPrograms} getVal={setValue}/>
 			}
-			<Container fluid className="p-5 bg-info text-light mb-4">
+			<Container fluid className='p-5 bg-info text-light mb-4'>
 				<Container>
-					<ResultsPageSearch />
+					<ResultsPageSearch prgArr={allPrograms} getVal={setValue} />
 				</Container>
 
 				<Container>
 					<ListGroup horizontal>
-						<ListGroup.Item className="border-0 p-0 mr-1"><Button variant="outline-dark">
-						Sports <Badge variant="light">x</Badge>
-						</Button></ListGroup.Item>
-						<ListGroup.Item className="border-0 p-0 mr-1"><Button variant="outline-dark">
-						Education <Badge variant="light">x</Badge>
-						</Button></ListGroup.Item>
+						<ListGroup.Item className='border-0 p-0 mr-1'>
+							<Button variant='outline-dark'>
+								Sports <Badge variant='light'>x</Badge>
+							</Button>
+						</ListGroup.Item>
+						<ListGroup.Item className='border-0 p-0 mr-1'>
+							<Button variant='outline-dark'>
+								Education <Badge variant='light'>x</Badge>
+							</Button>
+						</ListGroup.Item>
 					</ListGroup>
 				</Container>
 			</Container>
@@ -60,7 +60,6 @@ const Results = ({ allPrograms, homeFilterArr }) => {
 			</Row>
 			</Container>
 
-      {/* /////////////////////////////////////// */}
 			<ProgramsList
 				prgArr={allPrograms}
 				filteredPrograms={filteredResults || homeFilterChoice}
