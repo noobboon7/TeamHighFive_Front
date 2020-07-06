@@ -5,7 +5,7 @@ import ResultsPageSearch from '../searchbars/ResultsPageSearch'
 // import SearchLocation from "../searchbars/SearchLocation";
 import ProgramsList from "../programsList";
 
-// import { Badge, Button} from "react-bootstrap";
+import { Container, Row, Col, Badge, Button, ListGroup} from "react-bootstrap";
 
 
 const Results = ({ allPrograms, homeFilterArr }) => {
@@ -27,6 +27,36 @@ const Results = ({ allPrograms, homeFilterArr }) => {
 			}
 
 			<ResultsPageSearch />
+			<Container className="mb-5">
+				<ListGroup horizontal>
+					<ListGroup.Item className="border-0"><Button variant="">
+					Sports <Badge variant="light">x</Badge>
+					</Button></ListGroup.Item>
+					<ListGroup.Item className="border-0"><Button variant="outline-dark">
+					Education <Badge variant="light">x</Badge>
+					</Button></ListGroup.Item>
+				</ListGroup>
+			</Container>
+
+			<Container>
+			<Row xs={2} md={4} lg={6}>
+				<Col>
+					<Button variant="outline-dark">
+					Sports <Badge variant="light">x</Badge>
+					</Button>
+				</Col>
+				<Col>
+					<Button variant="outline-dark">
+					Education <Badge variant="light">x</Badge>
+					</Button>
+				</Col>
+				<Col>
+					<Button variant="outline-dark">
+					Brooklyn <Badge variant="light">x</Badge>
+					</Button>
+				</Col>
+			</Row>
+			</Container>
 			<ProgramsList
 				prgArr={allPrograms}
 				filteredPrograms={filteredResults || homeFilterChoice}
