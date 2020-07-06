@@ -43,14 +43,21 @@ const Results = ({ allPrograms, homeFilterArr }) => {
 				</Container>
 			</Container>
 
-			<Container className="text-right">
+			<Container>
+			<Row className="justify-content-between align-items-center">
+				<Col>
+					# of Results
+				</Col>
+				<Col className="text-right">
 					<Button variant="outline-info">
-						  <FontAwesomeIcon icon={faList} className="m-0" />
+							<FontAwesomeIcon icon={faList} className="m-0" />
 					</Button>
 					&nbsp;
 					<Button variant="outline-info">
 						<FontAwesomeIcon icon={faTh} className="m-0" />
 					</Button>
+				</Col>
+			</Row>
 			</Container>
 
       {/* /////////////////////////////////////// */}
