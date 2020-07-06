@@ -1,5 +1,5 @@
 import React from "react";
-import OrgCard from "./organizations/OrgCard";
+import ProgramCard from "./ProgramCard";
 
 const ProgramsList = ({prgArr, filteredPrograms}) => {
 	// console.log('this is Filteredfrom Plistcomp:',filteredPrograms)
@@ -7,10 +7,10 @@ const ProgramsList = ({prgArr, filteredPrograms}) => {
 		if(filteredPrograms.length){
 			// console.log('working:',filteredPrograms)
 			return filteredPrograms.map((program, idx) => (
-				<OrgCard key={idx} program={program} />
+				<ProgramCard key={idx} program={program} />
 			));
 		} else{
-			return prgArr.map((program, idx) => <OrgCard key={idx} program={program} />);
+			return prgArr.map((program, idx) => <ProgramCard key={idx} program={program} />);
 		}
 	}
 	console.log(viewPrograms())

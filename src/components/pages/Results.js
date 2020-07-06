@@ -5,8 +5,9 @@ import ResultsPageSearch from '../searchbars/ResultsPageSearch';
 // import SearchLocation from "../searchbars/SearchLocation";
 import ProgramsList from "../programsList";
 
-// import { Container, Badge, Button, ListGroup} from "react-bootstrap";
-
+import { Container, Row, Col, Badge, Button, ListGroup} from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faList, faTh } from "@fortawesome/free-solid-svg-icons";
 
 const Results = ({ allPrograms, homeFilterArr }) => {
 	const [value, setValue] = useState({});
@@ -21,8 +22,36 @@ const Results = ({ allPrograms, homeFilterArr }) => {
 			{
 				// <SearchLocation prgArr={allPrograms} getVal={setValue}/>
 			}
+			<Container fluid className='p-5 bg-info text-light mb-4'>
+				<Container>
+					<ResultsPageSearch prgArr={allPrograms} getVal={setValue} />
+				</Container>
 
-			<ResultsPageSearch prgArr={allPrograms} getVal={setValue} />
+				<Container>
+					<ListGroup horizontal>
+						<ListGroup.Item className='border-0 p-0 mr-1'>
+							<Button variant='outline-dark'>
+								Sports <Badge variant='light'>x</Badge>
+							</Button>
+						</ListGroup.Item>
+						<ListGroup.Item className='border-0 p-0 mr-1'>
+							<Button variant='outline-dark'>
+								Education <Badge variant='light'>x</Badge>
+							</Button>
+						</ListGroup.Item>
+					</ListGroup>
+				</Container>
+			</Container>
+
+			<Container className='text-right'>
+				<Button variant='outline-info'>
+					<FontAwesomeIcon icon={faList} className='m-0' />
+				</Button>
+				&nbsp;
+				<Button variant='outline-info'>
+					<FontAwesomeIcon icon={faTh} className='m-0' />
+				</Button>
+			</Container>
 
 			<ProgramsList
 				prgArr={allPrograms}

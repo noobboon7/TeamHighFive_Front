@@ -11,8 +11,8 @@ const ResultsPageSearchBar = ({prgArr, getVal}) => {
   console.log(parseLocation());
   return (
 		<>
-			<Form className='px-5'>
-				<h6 className='text-black mt-3'>Filter by</h6>
+			<Form>
+				<h6 className='text-black '>Filter by</h6>
 				<Form.Row>
 					<Form.Group as={Col} md='4'>
 						<Form.Label for='byCategories'>Category</Form.Label>
@@ -40,21 +40,6 @@ const ResultsPageSearchBar = ({prgArr, getVal}) => {
 					</Form.Group>
 				</Form.Row>
 			</Form>
-
-			<Container className='mb-5'>
-				<ListGroup horizontal>
-					<ListGroup.Item className='border-0'>
-						<Button variant=''>
-							Sports <Badge variant='light'>x</Badge>
-						</Button>
-					</ListGroup.Item>
-					<ListGroup.Item className='border-0'>
-						<Button variant='outline-dark'>
-							Education <Badge variant='light'>x</Badge>
-						</Button>
-					</ListGroup.Item>
-				</ListGroup>
-			</Container>
 		</>
 	);
 }
