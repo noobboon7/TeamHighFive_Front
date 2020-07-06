@@ -224,6 +224,7 @@ nav .navbar-nav .login .close {
 .searchbar-wrapper .dropdown-menu.show {
   max-height: 200px;
   overflow: auto;
+  z-index: 9999;
 }
 
 /* NOTE: Contact Us */

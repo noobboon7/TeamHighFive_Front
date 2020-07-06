@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import useFilterResults from "../../hooks/useFilterResults";
 import ResultsPageSearch from '../searchbars/ResultsPageSearch'
 
-// import SearchLocation from "../searchbars/SearchLocation";
+import SearchLocation from "../searchbars/SearchLocation";
 import ProgramsList from "../programsList";
 
 import { Container, Row, Col, Badge, Button, ListGroup} from "react-bootstrap";
@@ -23,10 +23,11 @@ const Results = ({ allPrograms, homeFilterArr }) => {
 				<span className='sr-only'>unread messages</span>
 			</Button> */}
 			{
-				//   <SearchLocation prgArr={allPrograms} getVal={setValue}/>
+				  <SearchLocation prgArr={allPrograms} getVal={setValue}/>
 			}
 
 			<ResultsPageSearch />
+      {/* //////////////////////////////////////////////////////// */}
 			<Container className="mb-5">
 				<ListGroup horizontal>
 					<ListGroup.Item className="border-0"><Button variant="">
@@ -37,7 +38,7 @@ const Results = ({ allPrograms, homeFilterArr }) => {
 					</Button></ListGroup.Item>
 				</ListGroup>
 			</Container>
-
+{/* ////////////////////////////////////////////////// */}
 			<Container>
 			<Row xs={2} md={4} lg={6}>
 				<Col>
@@ -57,6 +58,8 @@ const Results = ({ allPrograms, homeFilterArr }) => {
 				</Col>
 			</Row>
 			</Container>
+
+      {/* /////////////////////////////////////// */}
 			<ProgramsList
 				prgArr={allPrograms}
 				filteredPrograms={filteredResults || homeFilterChoice}

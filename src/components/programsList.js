@@ -2,7 +2,7 @@ import React from "react";
 import OrgCard from "./organizations/OrgCard";
 
 const ProgramsList = ({prgArr, filteredPrograms}) => {
-	console.log('this is Filteredfrom Plistcomp:',filteredPrograms)
+	// console.log('this is Filteredfrom Plistcomp:',filteredPrograms)
 	const viewPrograms = () => {
 		if(filteredPrograms.length){
 			// console.log('working:',filteredPrograms)
