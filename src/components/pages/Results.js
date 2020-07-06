@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import useFilterResults from "../../hooks/useFilterResults";
 import ResultsPageSearch from '../searchbars/ResultsPageSearch'
 
-// import SearchLocation from "../searchbars/SearchLocation";
+import SearchLocation from "../searchbars/SearchLocation";
 import ProgramsList from "../programsList";
 
 import { Container, Row, Col, Badge, Button, ListGroup} from "react-bootstrap";
@@ -24,8 +24,9 @@ const Results = ({ allPrograms, homeFilterArr }) => {
 				<span className='sr-only'>unread messages</span>
 			</Button> */}
 			{
-				//   <SearchLocation prgArr={allPrograms} getVal={setValue}/>
+				  <SearchLocation prgArr={allPrograms} getVal={setValue}/>
 			}
+<<<<<<< HEAD
 			<Container fluid className="p-5 bg-info text-light mb-4">
 				<Container>
 					<ResultsPageSearch />
@@ -46,12 +47,40 @@ const Results = ({ allPrograms, homeFilterArr }) => {
 			<Container className="text-right">
 					<Button variant="outline-info">
 						  <FontAwesomeIcon icon={faList} className="m-0" />
+=======
+
+			<ResultsPageSearch />
+      {/* //////////////////////////////////////////////////////// */}
+			<Container className="mb-5">
+				<ListGroup horizontal>
+					<ListGroup.Item className="border-0"><Button variant="">
+					Sports <Badge variant="light">x</Badge>
+					</Button></ListGroup.Item>
+					<ListGroup.Item className="border-0"><Button variant="outline-dark">
+					Education <Badge variant="light">x</Badge>
+					</Button></ListGroup.Item>
+				</ListGroup>
+			</Container>
+{/* ////////////////////////////////////////////////// */}
+			<Container>
+			<Row xs={2} md={4} lg={6}>
+				<Col>
+					<Button variant="outline-dark">
+					Sports <Badge variant="light">x</Badge>
+					</Button>
+				</Col>
+				<Col>
+					<Button variant="outline-dark">
+					Education <Badge variant="light">x</Badge>
+>>>>>>> acaabd7f340fc0454ec83bde02c4e4eb42b0b32e
 					</Button>
 					&nbsp;
 					<Button variant="outline-info">
 						<FontAwesomeIcon icon={faTh} className="m-0" />
 					</Button>
 			</Container>
+
+      {/* /////////////////////////////////////// */}
 			<ProgramsList
 				prgArr={allPrograms}
 				filteredPrograms={filteredResults || homeFilterChoice}
