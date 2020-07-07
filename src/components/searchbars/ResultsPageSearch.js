@@ -7,13 +7,13 @@ const ResultsPageSearchBar = ({prgArr, getVal}) => {
     locations = new Set(locations);
 		return [...locations];
   };
-  
+
   console.log(parseLocation());
   return (
 		<>
 			<Form>
 				<h6 className='text-black '>Filter by</h6>
-				<Form.Row>
+				<Form.Row className="align-items-end">
 					<Form.Group as={Col} md='4'>
 						<Form.Label for='byCategories'>Category</Form.Label>
 						<Form.Control as='select' id='byCategories'>
@@ -21,7 +21,7 @@ const ResultsPageSearchBar = ({prgArr, getVal}) => {
 							<option>technologyk</option>
 						</Form.Control>
 					</Form.Group>
-					<Form.Group as={Col} md='4'>
+					<Form.Group as={Col} md='3'>
 						<Form.Label for='byLocation'>Location</Form.Label>
 						<Form.Control as='select' id='byLocation'>
               {
@@ -31,12 +31,16 @@ const ResultsPageSearchBar = ({prgArr, getVal}) => {
 						</Form.Control>
 					</Form.Group>
 
-					<Form.Group as={Col} md='4'>
+          <Form.Group as={Col} md='3'>
 						<Form.Label for='bySeason'>Season</Form.Label>
 						<Form.Control as='select' id='bySeason'>
 							<option>Spring</option>
 							<option>Summer</option>
 						</Form.Control>
+					</Form.Group>
+
+          <Form.Group as={Col} md='2'>
+          <Button variant="dark" type="submit"> Update </Button>
 					</Form.Group>
 				</Form.Row>
 			</Form>
