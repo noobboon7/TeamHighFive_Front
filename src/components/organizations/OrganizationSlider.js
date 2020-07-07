@@ -31,7 +31,7 @@ const OrganizationSlider = () => {
 	let organizations = contextArrays.organizations;
 
   return (
-  <Slider {...settings}>
+    <Slider {...settings}>
     {
       organizations.slice(0,5).map((program, idx) => (
       <OrganizationSliderList key={idx} program = {program}/>

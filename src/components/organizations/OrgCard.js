@@ -22,17 +22,13 @@ const OrgCard = ({program}) => {
         <Card.Body >
             <Card.Title> {program.name} </Card.Title>
             <Card.Text > {formatDescription()} </Card.Text>
-            <Card.Link className="mx-0" href = {program.url}>
+            <Card.Link className="mx-0" href={program.url}>
               {program.url}
             </Card.Link>
-
-
         </Card.Body >
         <Card.Footer className="text-center">
-          <Link to={`/organization/${program.organization_id}`}>
-            <Button variant='info' renderas="button" >
-              <span>See More!</span>
-            </Button>
+          <Link to={`/organization/${program.organization_id}`} className="learnmore" >
+              <span>Learn More!</span>
           </Link>
         </Card.Footer>
       </Card>

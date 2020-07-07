@@ -112,11 +112,11 @@ nav .navbar-nav .login .close {
   color: var(--dark);
   font-size: xx-large;
 }
-.heroOrganizationSlider .learnmore,
-.heroOrganizationSlider .learnmore:link,
-.heroOrganizationSlider .learnmore:visited,
-.heroOrganizationSlider .learnmore:hover {
-  color: var(--color-red);
+.learnmore,
+.learnmore:link,
+.learnmore:visited,
+.learnmore:hover {
+  color: var(--color-red) !important;
   font-weight: 700;
 }
 
@@ -224,6 +224,7 @@ nav .navbar-nav .login .close {
 .searchbar-wrapper .dropdown-menu.show {
   max-height: 200px;
   overflow: auto;
+  z-index: 9999;
 }
 
 /* NOTE: Contact Us */
