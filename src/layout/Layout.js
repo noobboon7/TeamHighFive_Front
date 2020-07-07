@@ -104,57 +104,71 @@ const Layout = ({ children }) => {
                 </a>
               </li>
               <li className="list-inline-item">
-                <span className="m-0 text-dark login-modal" onClick={handleShow}>
-                  <FontAwesomeIcon icon={faUser} className="ml-5" />&nbsp;Login
+                <span
+                  className="m-0 text-dark login-modal"
+                  onClick={handleShow}
+                >
+                  <FontAwesomeIcon icon={faUser} className="ml-5" />
+                  &nbsp;Login
                 </span>
 
                 <Modal
-                show={show}
-                onHide={handleClose}
-                backdrop="static"
-                keyboard={false}
+                  show={show}
+                  onHide={handleClose}
+                  backdrop="static"
+                  keyboard={false}
                 >
-                  <Modal.Header closeButton>
-                    <Modal.Title>Organization Login</Modal.Title>
-                  </Modal.Header>
-                  <Modal.Body>
-                  <Form>
-                    <Form.Group controlId="formBasicEmail">
-                      <Form.Label>Email address</Form.Label>
-                      <Form.Control type="email" placeholder="Enter email" />
-                      <Form.Text className="text-muted">
-                        We'll never share your email with anyone else.
-                      </Form.Text>
-                    </Form.Group>
-                    <Form.Group controlId="formBasicPassword">
-                      <Form.Label>Password</Form.Label>
-                      <Form.Control type="password" placeholder="Password" />
-                    </Form.Group>
-                    <Form.Group controlId="formRequest">
-                    <Button variant="link">forgot password/username?</Button>
-                    </Form.Group>
-                    <Form.Group controlId="formBasicCheckbox">
-                      <Form.Check type="checkbox" label="Remember me" />
-                    </Form.Group>
+                  <Form onSubmit={handleSubmit}>
+                    <Modal.Header closeButton>
+                      <Modal.Title>Organization Login</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                      <Form.Group controlId="formBasicEmail">
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control
+                          type="email"
+                          placeholder="Enter email"
+                          onChange={handleEmail}
+                          value={email}
+                        />
+                        <Form.Text className="text-muted">
+                          We'll never share your email with anyone else.
+                        </Form.Text>
+                      </Form.Group>
+                      <Form.Group controlId="formBasicPassword">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control
+                          type="password"
+                          placeholder="Password"
+                          onChange={handlePassword}
+                          value={password}
+                        />
+                      </Form.Group>
+                      <Form.Group controlId="formRequest">
+                        <Button variant="link">
+                          forgot password/username?
+                        </Button>
+                      </Form.Group>
+                      <Form.Group controlId="formBasicCheckbox">
+                        <Form.Check type="checkbox" label="Remember me" />
+                      </Form.Group>
+                    </Modal.Body>
+                    <Modal.Footer>
+                      <Button type="submit" variant="secondary">
+                        Login
+                      </Button>
+                      <Button variant="primary">Register</Button>
+                    </Modal.Footer>
                   </Form>
-                  </Modal.Body>
-                  <Modal.Footer>
-                    <Button variant="secondary">
-                      Login
-                    </Button>
-                    <Button variant="primary">
-                      Register
-                    </Button>
-                  </Modal.Footer>
                 </Modal>
               </li>
-              <li className="list-inline-item">
+              {/* <li className="list-inline-item">
                 <div className="m-0 text-dark" onClick={() => setHidden(false)}>
                   <FontAwesomeIcon icon={faUser} className="ml-5" />
                 </div>
-              </li>
+              </li> */}
             </ul>
-            {!hidden && (
+            {/* {!hidden && (
               <div className="login">
                 <Login
                   setHidden={() => setHidden}
@@ -165,7 +179,7 @@ const Layout = ({ children }) => {
                   password={password}
                 />
               </div>
-            )}
+            )} */}
           </Nav>
         </Navbar.Collapse>
       </Navbar>
