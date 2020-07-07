@@ -7,6 +7,11 @@ const ResultsPageSearchBar = ({prgArr, getVal}) => {
     locations = new Set(locations);
 		return [...locations];
   };
+  const parseCat = () => {
+    let category = prgArr.map(program => program.categories).flat();
+    category = new Set(category);
+		return [...category];
+  };
   
   console.log(parseLocation());
   return (
@@ -17,17 +22,17 @@ const ResultsPageSearchBar = ({prgArr, getVal}) => {
 					<Form.Group as={Col} md='4'>
 						<Form.Label for='byCategories'>Category</Form.Label>
 						<Form.Control as='select' id='byCategories'>
-							<option>sports</option>
-							<option>technologyk</option>
+							{parseCat().map(cat => (
+								<option>{cat}</option>
+							))}
 						</Form.Control>
 					</Form.Group>
 					<Form.Group as={Col} md='4'>
 						<Form.Label for='byLocation'>Location</Form.Label>
 						<Form.Control as='select' id='byLocation'>
-              {
-                parseLocation().map(location => <option>{location}</option>)
-              }
-
+							{parseLocation().map(location => (
+								<option>{location}</option>
+							))}
 						</Form.Control>
 					</Form.Group>
 
