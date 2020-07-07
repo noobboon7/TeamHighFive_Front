@@ -112,10 +112,10 @@ nav .navbar-nav .login .close {
   color: var(--dark);
   font-size: xx-large;
 }
-.heroOrganizationSlider .learnmore,
-.heroOrganizationSlider .learnmore:link,
-.heroOrganizationSlider .learnmore:visited,
-.heroOrganizationSlider .learnmore:hover {
+.learnmore,
+.learnmore:link,
+.learnmore:visited,
+.learnmore:hover {
   color: var(--color-red);
   font-weight: 700;
 }
