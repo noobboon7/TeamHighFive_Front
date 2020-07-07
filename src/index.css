@@ -116,7 +116,7 @@ nav .navbar-nav .login .close {
 .learnmore:link,
 .learnmore:visited,
 .learnmore:hover {
-  color: var(--color-red);
+  color: var(--color-red) !important;
   font-weight: 700;
 }
 
