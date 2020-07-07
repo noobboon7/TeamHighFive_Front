@@ -56,7 +56,7 @@ function App() {
 					<Route exact path='/contact' render={(routerProps) => <Contact />} />
 					<Route
 						exact
-						path='/results'
+						path='/programs'
 						render={(routerProps) => (
 							<Results allPrograms={programs} homeFilterArr={filteredProgramsArr} />
 						)}
