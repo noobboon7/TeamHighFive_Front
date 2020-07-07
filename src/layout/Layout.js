@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import axios from "axios";
 
 import { Navbar, Nav, Container, Row, Col } from "react-bootstrap";
-import { Modal, Form, Button } from "react-bootstrap";
+
 import Footer from "../styled-components/Footer";
-import Login from "../components/login/Login";
+import LoginModal from "../components/loginModal/LoginModal";
 // import styles from "./Layout.module.css";
 
 import Logo from "../static/youth_connection_logo.png";
@@ -18,7 +19,7 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const Layout = ({ children }) => {
-  const [hidden, setHidden] = useState(true);
+  //const [hidden, setHidden] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -26,19 +27,20 @@ const Layout = ({ children }) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     console.log("Email & Password: ", email, password);
+    const response = await axios.get(
+      "https://connection-youth.herokuapp.com/login"
+    );
   };
 
   const handleEmail = (event) => {
     setEmail(event.target.value);
-    console.log(email);
   };
 
   const handlePassword = (event) => {
     setPassword(event.target.value);
-    console.log(password);
   };
 
   return (
@@ -111,79 +113,20 @@ const Layout = ({ children }) => {
                   <FontAwesomeIcon icon={faUser} className="ml-5" />
                   &nbsp;Login
                 </span>
-
-                <Modal
-                  show={show}
-                  onHide={handleClose}
-                  backdrop="static"
-                  keyboard={false}
-                >
-                  <Form onSubmit={handleSubmit}>
-                    <Modal.Header closeButton>
-                      <Modal.Title>Organization Login</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                      <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Email address</Form.Label>
-                        <Form.Control
-                          type="email"
-                          placeholder="Enter email"
-                          onChange={handleEmail}
-                          value={email}
-                        />
-                        <Form.Text className="text-muted">
-                          We'll never share your email with anyone else.
-                        </Form.Text>
-                      </Form.Group>
-                      <Form.Group controlId="formBasicPassword">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control
-                          type="password"
-                          placeholder="Password"
-                          onChange={handlePassword}
-                          value={password}
-                        />
-                      </Form.Group>
-                      <Form.Group controlId="formRequest">
-                        <Button variant="link">
-                          forgot password/username?
-                        </Button>
-                      </Form.Group>
-                      <Form.Group controlId="formBasicCheckbox">
-                        <Form.Check type="checkbox" label="Remember me" />
-                      </Form.Group>
-                    </Modal.Body>
-                    <Modal.Footer>
-                      <Button type="submit" variant="secondary">
-                        Login
-                      </Button>
-                      <Button variant="primary">Register</Button>
-                    </Modal.Footer>
-                  </Form>
-                </Modal>
-              </li>
-              {/* <li className="list-inline-item">
-                <div className="m-0 text-dark" onClick={() => setHidden(false)}>
-                  <FontAwesomeIcon icon={faUser} className="ml-5" />
-                </div>
-              </li> */}
-            </ul>
-            {/* {!hidden && (
-              <div className="login">
-                <Login
-                  setHidden={() => setHidden}
+                <LoginModal
                   handleSubmit={handleSubmit}
                   handleEmail={handleEmail}
                   handlePassword={handlePassword}
                   email={email}
                   password={password}
+                  show={show}
+                  onHide={handleClose}
                 />
-              </div>
-            )} */}
+              </li>
+            </ul>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-
       {children}
       <Footer id="footer" className="py-3 mt-3">
         <Container className="container-fluid text-center">
@@ -207,32 +150,6 @@ const Layout = ({ children }) => {
             </Col>
           </Row>
         </Container>
-        {/*      <Container className="container-fluid text-center">
-        <Row className="align-items-center">
-          <Col md="4">
-            <p>&copy; Youth Connnection</p>
-          </Col>
-          <Col md="4">
-            <Row className="text-center">
-              <Col md="4">
-              <img className="img-fluid mx-auto mb-2" src={Logo} alt="Youth Connection"></img>
-              <h6>Youth Connnection</h6>
-              </Col>
-              <Col md="4">
-              <img className="img-fluid mx-auto mb-2" src={NYCCodersLogo} alt="NYC Coders"></img>
-              <h6>NYC Coders</h6>
-              </Col>
-            </Row>
-          </Col>
-          <Col md="4">
-            <ul className="list-unstyled">
-            <li><Link to="/about">About</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
-            </ul>
-          </Col>
-        </Row>
-      </Container>
-*/}
       </Footer>
     </div>
   );
