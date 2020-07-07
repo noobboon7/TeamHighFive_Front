@@ -46,7 +46,7 @@ const Results = ({ allPrograms, homeFilterArr }) => {
 			<Container>
 			<Row className="justify-content-between align-items-center">
 				<Col>
-					# of Results
+					{allPrograms.length} matching results
 				</Col>
 				<Col className="text-right">
 					<Button variant="outline-info">
