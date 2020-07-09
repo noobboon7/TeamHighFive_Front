@@ -13,39 +13,49 @@ const ResultsPageSearchBar = ({prgArr, getVal}) => {
 		return [...category];
   };
 
-  console.log(parseLocation());
   return (
 		<>
 			<Form>
 				<h6 className='text-black '>Filter by</h6>
-				<Form.Row className="align-items-end">
+				<Form.Row className='align-items-end'>
 					<Form.Group as={Col} md='4'>
 						<Form.Label for='byCategories'>Category</Form.Label>
-						<Form.Control as='select' id='byCategories'>
-							{parseCat().map(cat => (
+						<Form.Control
+							as='select'
+							id='byCategories'
+							defaultValue='Choose...'>
+							<option>Choose...</option>
+							{parseCat().map((cat) => (
 								<option>{cat}</option>
 							))}
 						</Form.Control>
 					</Form.Group>
 					<Form.Group as={Col} md='3'>
 						<Form.Label for='byLocation'>Location</Form.Label>
-						<Form.Control as='select' id='byLocation'>
-							{parseLocation().map(location => (
+						<Form.Control as='select' id='byLocation' defaultValue='Choose...'>
+							<option>Choose...</option>
+							{parseLocation().map((location) => (
 								<option>{location}</option>
 							))}
 						</Form.Control>
 					</Form.Group>
 
-          <Form.Group as={Col} md='3'>
-						<Form.Label for='bySeason'>Season</Form.Label>
-						<Form.Control as='select' id='bySeason'>
+					<Form.Group as={Col} md='3'>
+						<Form.Label for='bySeason' defaultValue='Choose...'>
+							Season
+						</Form.Label>
+						<Form.Control as='select' id='bySeason' defaultValue='Choose...'>
+							<option>Choose...</option>
 							<option>Spring</option>
 							<option>Summer</option>
 						</Form.Control>
 					</Form.Group>
 
-          <Form.Group as={Col} md='2'>
-          <Button variant="dark" type="submit"> Update </Button>
+					<Form.Group as={Col} md='2'>
+						<Button variant='dark' type='submit'>
+							{" "}
+							Update{" "}
+						</Button>
 					</Form.Group>
 				</Form.Row>
 			</Form>
