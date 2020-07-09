@@ -41,73 +41,72 @@ const Layout = ({ children }) => {
 		console.log(password);
 	};
 
-	return (
-		<div>
-			<Helmet>
-				<title>Welcome to Youth Connection!</title>
-				<meta
-					name='description'
-					content='Welcome to Youth Connection! The mission is to make extracurricular (specifically non-profit) organizations and programs more accessible and reachable to the youth.'
-				/>
-				<body class='homepage' />
-			</Helmet>
-			<Navbar
-				collapseOnSelect
-				color='light'
-				expand='lg'
-				sticky='top'
-				className='custom-navbar'>
-				<Navbar.Brand>
-					<Link to='/'>
-						<img
-							className='logo img-fluid'
-							src={Logo}
-							alt='Youth Connnection'></img>
-					</Link>
-				</Navbar.Brand>
-				<Navbar.Toggle aria-controls='responsive-navbar-nav' />
-				<Navbar.Collapse id='navbarNav'>
-					<Nav className='d-flex justify-content-around w-100'>
-						<ul className='list-inline m-0 text-uppercase'>
-							<li className='list-inline-item'>
-								<Link to='/'>Home</Link>
-							</li>
-							<li className='list-inline-item'>
-								<Link to='/about'>About</Link>
-							</li>
-							<li className='list-inline-item'>
-								<Link to='/programs'>Programs</Link>
-							</li>
-							<li className='list-inline-item'>
-								<Link to='/'>Organization</Link>
-							</li>
-							<li className='list-inline-item'>
-								<Link to='/contact'>Contact</Link>
-							</li>
-						</ul>
-						<ul className='list-inline m-0 text-uppercase social-media'>
-							<li className='list-inline-item'>
-								<a href='/' className='m-0'>
-									<FontAwesomeIcon icon={faFacebook} className='m-0' />
-								</a>
-							</li>
-							<li className='list-inline-item'>
-								<a href='/' className='m-0'>
-									<FontAwesomeIcon icon={faTwitter} className='m-0' />
-								</a>
-							</li>
-							<li className='list-inline-item'>
-								<a href='/' className='m-0'>
-									<FontAwesomeIcon icon={faInstagram} className='m-0' />
-								</a>
-							</li>
-							<li className='list-inline-item'>
-								<span
-									className='m-0 text-dark login-modal'
-									onClick={handleShow}>
-									<FontAwesomeIcon icon={faUser} className='ml-5' />
-									&nbsp;Login
-								</span>
+  return (
+    <div>
+      <Helmet>
+        <title>Welcome to Youth Connection!</title>
+        <meta
+          name="description"
+          content="Welcome to Youth Connection! The mission is to make extracurricular (specifically non-profit) organizations and programs more accessible and reachable to the youth."
+        />
+        <body class="homepage" />
+      </Helmet>
+      <Navbar
+        collapseOnSelect
+        color="light"
+        expand="lg"
+        sticky="top"
+        className="custom-navbar"
+      >
+        <Navbar.Brand>
+          <Link to="/">
+            <img
+              className="logo img-fluid"
+              src={Logo}
+              alt="Youth Connnection"
+            ></img>
+          </Link>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="navbarNav">
+          <Nav className="d-flex justify-content-around w-100">
+            <ul className="list-inline m-0 text-uppercase">
+              <li className="list-inline-item">
+                <Link to="/">Home</Link>
+              </li>
+              <li className="list-inline-item">
+                <Link to="/about">About</Link>
+              </li>
+              <li className="list-inline-item">
+                <Link to="/programs">Programs</Link>
+              </li>
+              <li className="list-inline-item">
+                <Link to="/">Organization</Link>
+              </li>
+              <li className="list-inline-item">
+                <Link to="/contact">Contact</Link>
+              </li>
+            </ul>
+            <ul className="list-inline m-0 text-uppercase social-media">
+              <li className="list-inline-item">
+                <a href="/" className="m-0">
+                  <FontAwesomeIcon icon={faFacebook} className="m-0" />
+                </a>
+              </li>
+              <li className="list-inline-item">
+                <a href="/" className="m-0">
+                  <FontAwesomeIcon icon={faTwitter} className="m-0" />
+                </a>
+              </li>
+              <li className="list-inline-item">
+                <a href="/" className="m-0">
+                  <FontAwesomeIcon icon={faInstagram} className="m-0" />
+                </a>
+              </li>
+              <li className="list-inline-item">
+                <span className="m-0 text-dark login-modal" onClick={handleShow}>
+                  <FontAwesomeIcon icon={faUser} className="ml-5" />&nbsp;Login
+                </span>
 
 								<Modal
 									show={show}

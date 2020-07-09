@@ -14,7 +14,7 @@ const SearchLocation = ({prgArr, getVal, disable}) => {
     locations = new Set(locations);
     return [...locations];
   };
-
+  
   return (
 		<Col md='5' className='p-0 searchbar-wrapper'>
 			<DropdownButton
