@@ -9,10 +9,9 @@ import {
 const SearchCategory = ({ prgArr, getVal }) => {
   const [categoryChoice, setCategoryChoice] = useState("Categories");
   const parseCurrentAvaliableCategories = () => {
-    let categoriesArr = prgArr.map((program) => program.categories);
-    categoriesArr = categoriesArr.flat();
+    let categoriesArr = prgArr.map((program) => program.categories).flat();
     categoriesArr = new Set(categoriesArr);
-    return Array.from(categoriesArr);
+    return [...categoriesArr]
   };
   return (
     <Col md="5" className="p-0 searchbar-wrapper">
@@ -27,6 +26,7 @@ const SearchCategory = ({ prgArr, getVal }) => {
           setCategoryChoice(e);
         }}
       >
+        <Dropdown.Item eventKey='Categories' key='default'>Categories</Dropdown.Item>
         {parseCurrentAvaliableCategories().map((program, idx) => (
           <Dropdown.Item eventKey={program} key={idx}>
             {program}

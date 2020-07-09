@@ -15,28 +15,31 @@ const SearchLocation = ({prgArr, getVal, disable}) => {
     return [...locations];
   };
 
-  return(
-      <Col md="5" className="p-0 searchbar-wrapper">
-      <DropdownButton
-        disabled={disable}
-        onSelect={(e) => {
-          getVal(valObj => ({...valObj, location: e }));
-          setLocation(e)}}
-        as={ButtonGroup}
-        variant="light"
-        title={location}
-        id="input-group-dropdown-2"
-        className="w-100"
-      >
-        {parseLocation().map((local, idx) => (
-          <Dropdown.Item eventKey={local} key={idx}>
-            {local}
-          </Dropdown.Item>
-        ))}
-      </DropdownButton>
+  return (
+		<Col md='5' className='p-0 searchbar-wrapper'>
+			<DropdownButton
+				disabled={disable}
+				onSelect={(e) => {
+					getVal((valObj) => ({ ...valObj, location: e }));
+					setLocation(e);
+				}}
+				as={ButtonGroup}
+				variant='light'
+				title={location}
+				id='input-group-dropdown-2'
+				className='w-100'>
+				<Dropdown.Item eventKey='Location' key='default'>
+					Location
+				</Dropdown.Item>
 
-    </Col>
-  )
+				{parseLocation().map((local, idx) => (
+					<Dropdown.Item eventKey={local} key={idx}>
+						{local}
+					</Dropdown.Item>
+				))}
+			</DropdownButton>
+		</Col>
+	);
 };
 
 export default SearchLocation;
