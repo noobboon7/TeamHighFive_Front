@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import axios from "axios";
+// import axios from "axios";
 
 import { Navbar, Nav, Container, Row, Col } from "react-bootstrap";
 

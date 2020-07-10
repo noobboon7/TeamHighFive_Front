@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Form, Container, ListGroup, Button, Badge} from "react-bootstrap";
+import { Col, Form, Button} from "react-bootstrap";
 
 const ResultsPageSearchBar = ({prgArr, getVal}) => {
   const parseLocation = () => {
