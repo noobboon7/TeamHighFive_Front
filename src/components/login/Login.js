@@ -12,9 +12,7 @@ const Login = ({
   return (
     <Card style={{ width: "18rem" }}>
       <Card.Body>
-        <div className="close" onClick={setHidden(true)}>
-          X
-        </div>
+        <div className="close" /*onClick={setHidden(true)}*/>X</div>
         <Card.Title>Organization Login</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
         <Form onSubmit={handleSubmit}>
