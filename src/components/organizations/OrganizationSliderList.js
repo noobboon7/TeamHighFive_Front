@@ -4,7 +4,6 @@ import React from "react";
 import {Col,Card} from "react-bootstrap";
 // import {Link} from 'react-router-dom'
 
-
 //add color "info" to button and height
 const OrganizationSliderList = ({program}) => {
   function formatDescription() {

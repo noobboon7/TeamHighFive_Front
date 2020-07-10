@@ -11,16 +11,7 @@ import CountUp from 'react-countup';
 const Connections = () => {
   const contextArrays = useContext(fetchContext);
   let programs = contextArrays.programs;
-    // const categoryCounts = () => {
-    //     let catArr = (programs.map(prg => prg.categories))
-    //     catArr = catArr.flat()
-    //      catArr = catArr.reduce((acc, word) => {
-    //         acc[word] = (acc[word] || 0) + 1
-    //         return acc;
-    //     },[])
-
-    // };
-
+  
     return(
         <div className='connectionDiv container-fluid d-flex flex-column align-items-center py-5 my-5'>
         <div className='connect-head-div'>

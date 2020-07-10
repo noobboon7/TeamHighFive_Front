@@ -9,11 +9,3 @@ const Hero = () => (
 );
 
 export default Hero;
-
-/*
-                          [prgArr]
-app ----> home -> hero -> searchBars -> filter components
-
-                            Results
-                            [filtered Array]
-*/
