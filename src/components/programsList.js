@@ -2,9 +2,9 @@ import React from "react";
 import ProgramCard from "./ProgramCard";
 
 const ProgramsList = ({prgArr, filteredPrograms}) => {
-	// console.log('this is Filteredfrom Plistcomp:',filteredPrograms)
+	// console.log('this is Filtered from Plistcomp:',filteredPrograms)
 	const viewPrograms = () => {
-		if(filteredPrograms.length){
+		if(filteredPrograms){
 			// console.log('working:',filteredPrograms)
 			return filteredPrograms.map((program, idx) => (
 				<ProgramCard key={idx} program={program} />
@@ -13,7 +13,7 @@ const ProgramsList = ({prgArr, filteredPrograms}) => {
 			return prgArr.map((program, idx) => <ProgramCard key={idx} program={program} />);
 		}
 	}
-	console.log(viewPrograms())
+	// console.log(viewPrograms())
 	
 	return (
 		<div className='container mt-5 organizationList'>

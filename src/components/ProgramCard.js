@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Col, Card, Button, Badge } from "react-bootstrap";
+import { Col, Card, Badge } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
@@ -14,7 +14,7 @@ const ProgramCard = ({ program }) => {
 		return newString + "...";
 	}
 	const catBadges = () => {
-		return program.categories.map(cat => <Badge variant='info' className="mr-2">{cat}</Badge>);
+		return program.categories.map(cat => <Badge key={cat} variant='info' className="mr-2">{cat}</Badge>);
 	}
 
 	return (

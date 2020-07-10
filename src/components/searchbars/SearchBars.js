@@ -30,7 +30,7 @@ const SearchBars = ({history}) => {
 		e.preventDefault();
 		filter(filteredResults)
 		sessionStorage.setItem('userSelects2', JSON.stringify(filteredResults))
-		history.push('/results');
+		history.push('/programs');
 	};
 
 	return (

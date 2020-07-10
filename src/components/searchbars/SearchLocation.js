@@ -8,7 +8,8 @@ import {
 
 const SearchLocation = ({prgArr, getVal, disable}) => {
   const [location, setLocation] = useState('Location');
-
+  
+  //make an array of available categories 
   const parseLocation = () => {
     let locations = prgArr.map(program => program.location);
     locations = new Set(locations);

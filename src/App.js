@@ -16,31 +16,37 @@ function App() {
 	const [programs, setPrograms] = useState([]);
 	const [organizations, setOrganizations] = useState([]);
 	const [filteredProgramsArr, setFilteredProgramsArr] = useState([]);
-
+	const sessionPrograms = sessionStorage.getItem('allPrograms')
+	// console.log(sessionStorage.allPrograms, programs);
+	console.log(programs);
+	// application breaks when cookies/sessionStorage is cleared
+	// break cannot read null in one of the search Component
 	useEffect(() => {
-		if(sessionStorage){
-			let arr = JSON.parse(sessionStorage.getItem("userSelects2"));
-			setFilteredProgramsArr(arr)
-			// console.log(sessionStorage)
+		if(sessionStorage.userSelects2){
+			let arr = JSON.parse(sessionStorage.userSelects2);
+			setFilteredProgramsArr(arr);
 		}
-		if (programs.length < 1) {
+		// ensuring only 1 api request is made for all programs in the session
+		if (!programs.length && !sessionPrograms) {
 			console.count('set:')
 			fetch("https://connection-youth.herokuapp.com/programs")
 				.then((res) => res.json())
 				.then((programs) => {
 					setPrograms(programs);
-					sessionStorage.setItem('allPrograms', JSON.stringify(programs))
+					sessionStorage.setItem('allPrograms', JSON.stringify(programs));
 				});
 		}
-		if (organizations.length < 1) {
+		if(!programs.length) setPrograms(JSON.parse(sessionPrograms)) 
+
+		if (!organizations.length) {
 			fetch("https://connection-youth.herokuapp.com/organizations")
 				.then((res) => res.json())
 				.then((organizations) => {
 					setOrganizations(organizations);
 				});
-				return 
 		}
-	}, [programs, organizations]);
+		// return 
+	}, [programs, organizations, sessionPrograms]);
 
 
 	return (
