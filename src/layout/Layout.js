@@ -19,7 +19,6 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const Layout = ({ children }) => {
-  //const [hidden, setHidden] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -30,9 +29,9 @@ const Layout = ({ children }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log("Email & Password: ", email, password);
-    const response = await axios.get(
-      "https://connection-youth.herokuapp.com/login"
-    );
+    // const response = await axios.get(
+    //   "https://connection-youth.herokuapp.com/login"
+    // );
   };
 
   const handleEmail = (event) => {

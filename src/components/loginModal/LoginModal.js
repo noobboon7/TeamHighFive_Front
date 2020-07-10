@@ -8,10 +8,10 @@ const LoginModal = ({
   email,
   password,
   show,
-  handleClose,
+  onHide,
 }) => {
   return (
-    <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
+    <Modal show={show} onHide={onHide} keyboard={false} centered>
       <Form onSubmit={handleSubmit}>
         <Modal.Header closeButton>
           <Modal.Title>Organization Login</Modal.Title>
