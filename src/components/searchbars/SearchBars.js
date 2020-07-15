@@ -19,12 +19,12 @@ const SearchBars = ({history}) => {
 	let filter = contextArrays.setFilteredProgramsArr;
 
 	const filteredResults = useFilterResults(programs, value);
-	
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		filter(filteredResults)
 		sessionStorage.setItem('userSelects2', JSON.stringify(filteredResults))
-		history.push('/programs');
+		history.push('/results');
 	};
 
 	return (

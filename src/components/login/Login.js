@@ -10,7 +10,7 @@ const Login = ({
   password,
 }) => {
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card>
       <Card.Body>
         <div className="close" /*onClick={setHidden(true)}*/>X</div>
         <Card.Title>Organization Login</Card.Title>
@@ -45,6 +45,7 @@ const Login = ({
         </Card.Link>
       </Card.Body>
     </Card>
+
   );
 };
 

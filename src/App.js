@@ -8,6 +8,10 @@ import Contact from "./components/pages/Contact";
 import HowItWorks from "./components/pages/HowItWorks";
 import ShowPage from "./components/pages/ShowPage";
 import Results from "./components/pages/Results";
+import OrganizationAdminProfile from "./components/organizations/admin/Profile";
+import OrganizationAdminInformation from "./components/organizations/admin/Information";
+import OrganizationAdminPrograms from "./components/organizations/admin/Programs";
+
 import "./App.css";
 
 import {fetchContext} from './fetchContext';
@@ -67,6 +71,9 @@ function App() {
 						render={(routerProps) => <HowItWorks />}
 					/>
 					<Route exact path='/organization/:id' component={ShowPage} />
+					<Route exact path='/admin/profile' component={OrganizationAdminProfile} />
+					<Route exact path='/admin/information' component={OrganizationAdminInformation} />
+					<Route exact path='/admin/programs' component={OrganizationAdminPrograms} />
 				</Switch>
 			</Layout>
 		</fetchContext.Provider>
