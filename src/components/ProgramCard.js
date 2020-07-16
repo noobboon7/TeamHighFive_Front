@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Col, Card, Button, Badge } from "react-bootstrap";
+import { Col, Card, Badge } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
