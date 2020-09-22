@@ -8,6 +8,10 @@ import Contact from "./components/pages/Contact";
 import HowItWorks from "./components/pages/HowItWorks";
 import ShowPage from "./components/pages/ShowPage";
 import Results from "./components/pages/Results";
+import OrganizationAdminProfile from "./components/organizations/admin/Profile";
+import OrganizationAdminInformation from "./components/organizations/admin/Information";
+import OrganizationAdminPrograms from "./components/organizations/admin/Programs";
+
 import "./App.css";
 
 import {fetchContext} from './fetchContext';
@@ -16,13 +20,20 @@ function App() {
 	const [programs, setPrograms] = useState([]);
 	const [organizations, setOrganizations] = useState([]);
 	const [filteredProgramsArr, setFilteredProgramsArr] = useState([]);
-	
+
 	useEffect(() => {
+		if(sessionStorage){
+			let arr = JSON.parse(sessionStorage.getItem("userSelects2"));
+			setFilteredProgramsArr(arr)
+			// console.log(sessionStorage)
+		}
 		if (programs.length < 1) {
+			console.count('set:')
 			fetch("https://connection-youth.herokuapp.com/programs")
 				.then((res) => res.json())
 				.then((programs) => {
 					setPrograms(programs);
+					sessionStorage.setItem('allPrograms', JSON.stringify(programs))
 				});
 		}
 		if (organizations.length < 1) {
@@ -49,9 +60,9 @@ function App() {
 					<Route exact path='/contact' render={(routerProps) => <Contact />} />
 					<Route
 						exact
-						path='/results'
+						path='/programs'
 						render={(routerProps) => (
-							<Results prgArray={filteredProgramsArr} />
+							<Results allPrograms={programs} homeFilterArr={filteredProgramsArr} />
 						)}
 						/>
 					<Route
@@ -60,6 +71,9 @@ function App() {
 						render={(routerProps) => <HowItWorks />}
 					/>
 					<Route exact path='/organization/:id' component={ShowPage} />
+					<Route exact path='/admin/profile' component={OrganizationAdminProfile} />
+					<Route exact path='/admin/information' component={OrganizationAdminInformation} />
+					<Route exact path='/admin/programs' component={OrganizationAdminPrograms} />
 				</Switch>
 			</Layout>
 		</fetchContext.Provider>

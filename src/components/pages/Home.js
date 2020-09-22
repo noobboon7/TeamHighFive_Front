@@ -3,7 +3,7 @@ import React from "react";
 import Hero from "../hero/Hero";
 // import OrganizationList from "../organizations/OrganizationList";
 import OrganizationSlider from "../organizations/OrganizationSlider";
-import WordAboutUs from "../home/WordAboutUs";
+import HowItWorks from "../home/HowItWorks";
 import Connections from "../home/Connections";
 import ImpactingPrograms from "../home/ImpactingPrograms";
 
@@ -13,10 +13,8 @@ const Home = () => (
     <div className="heroOrganizationSlider container-fluid mt-5">
       <OrganizationSlider />
     </div>
-{
-  
-}
-    <WordAboutUs/>
+
+    <HowItWorks/>
     <ImpactingPrograms/>
     <Connections/>
   </div>

@@ -10,7 +10,7 @@ const ShowPage = (props) => {
   } = props;
 
   let id = parseInt(params.id);
-  console.log(id);
+
 
   useEffect(() => {
     async function fetchOrganization() {
@@ -67,7 +67,6 @@ const ShowPage = (props) => {
         <Row className="mb-5">
           <Col md="4">
           <img src={organization.logo == null ? PlaceHolderLogo : organization.logo } alt={organization.name} className="img-fluid"></img>
-          <p>{console.log("organization",organization)}</p>
           </Col>
           <Col md="6" className="bg-white px-5 py-3">
           <h1>{organization.name}</h1>

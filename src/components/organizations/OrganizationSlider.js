@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import {fetchContext} from '../../fetchContext'
+import {fetchContext} from '../../fetchContext';
 import OrganizationSliderList from "./OrganizationSliderList";
 
 // https://www.npmjs.com/package/react-slick
@@ -31,7 +31,7 @@ const OrganizationSlider = () => {
 	let organizations = contextArrays.organizations;
 
   return (
-  <Slider {...settings}>
+    <Slider {...settings}>
     {
       organizations.slice(0,5).map((program, idx) => (
       <OrganizationSliderList key={idx} program = {program}/>
