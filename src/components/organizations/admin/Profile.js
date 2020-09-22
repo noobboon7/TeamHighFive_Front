@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col, Card, ListGroup, Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faCog, faDatabase, faInfoCircle, faCertificate, faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faCog, faDatabase, faInfoCircle, faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
 const OrganizationAdminProfile = () => {
   return (
