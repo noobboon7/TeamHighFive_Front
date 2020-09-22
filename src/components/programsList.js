@@ -13,7 +13,7 @@ const ProgramsList = ({prgArr, filteredPrograms}) => {
 			return prgArr.map((program, idx) => <ProgramCard key={idx} program={program} />);
 		}
 	}
-	console.log(viewPrograms())
+	// console.log(viewPrograms())
 	
 	return (
 		<div className='container mt-5 organizationList'>

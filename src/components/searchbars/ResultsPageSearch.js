@@ -13,7 +13,7 @@ const ResultsPageSearchBar = ({prgArr, getVal}) => {
 		return [...category];
   };
 
-  console.log(parseLocation());
+  // console.log(parseLocation());
   return (
 		<>
 			<Form>

@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("Email & Password: ", email, password);
+    // console.log("Email & Password: ", email, password);
     // const response = await axios.get(
     //   "https://connection-youth.herokuapp.com/login"
     // );
@@ -81,9 +81,9 @@ const Layout = ({ children }) => {
               <li className="list-inline-item">
                 <Link to="/programs">Programs</Link>
               </li>
-              <li className="list-inline-item">
+              {/* <li className="list-inline-item">
                 <Link to="/">Organization</Link>
-              </li>
+              </li> */}
               <li className="list-inline-item">
                 <Link to="/contact">Contact</Link>
               </li>

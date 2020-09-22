@@ -27,7 +27,7 @@ const Results = ({ allPrograms, homeFilterArr }) => {
 					<ResultsPageSearch prgArr={allPrograms} getVal={setValue} />
 				</Container>
 
-				<Container>
+				{/* <Container>
 					<ListGroup horizontal>
 						<ListGroup.Item className='border-0 p-0 mr-1'>
 							<Button variant='outline-dark'>
@@ -40,10 +40,10 @@ const Results = ({ allPrograms, homeFilterArr }) => {
 							</Button>
 						</ListGroup.Item>
 					</ListGroup>
-				</Container>
+				</Container> */}
 			</Container>
 
-			<Container>
+			{/* <Container>
 			<Row className="justify-content-between align-items-center">
 				<Col>
 					{allPrograms.length} matching results
@@ -58,7 +58,7 @@ const Results = ({ allPrograms, homeFilterArr }) => {
 					</Button>
 				</Col>
 			</Row>
-			</Container>
+			</Container> */}
 
 			<ProgramsList
 				prgArr={allPrograms}

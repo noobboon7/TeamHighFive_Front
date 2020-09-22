@@ -6,9 +6,9 @@ const useFilterResults = (programs, { category, location, season }) => {
 	});
 
 	if(season || location){
-		let type = (season || location);
-		console.log('hello from if type:', type)
-		console.log('filters if:', filteredCategories)
+		// let type = (season || location);
+		// console.log('hello from if type:', type)
+		// console.log('filters if:', filteredCategories)
 
 		if(filteredCategories.length){
 			return filteredCategories.filter((program) => {
