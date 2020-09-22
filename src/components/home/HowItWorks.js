@@ -9,8 +9,8 @@ const HowItWorks = () => (
             <p className='wordDescription'>Our team cares deeply about the racial injustices that affect people of color everyday. We believe that we can be a force for change by empowering underrepresented youth and connecting them with organizations that understand the need for providing equal access to opportunities and resources.</p>
             <div className='buttonDiv text-center'>
                 <a href="https://forms.gle/8UpNNNfrWh5Exnvd9" target="_blank" rel="noopener noreferrer" className='wordBtn wordBtnSolid'>Add a Program</a>
-                <a href="/" className='wordBtn wordBtnOutline'>Find Programs</a>
-                <a href="/" className='wordBtn wordBtnOutline'>Find Organizations</a>
+                <a href="/programs" className='wordBtn wordBtnOutline'>Find Programs</a>
+                {/* <a href="/" className='wordBtn wordBtnOutline'>Find Organizations</a>*/}
             </div>
         </div>
       </div>
