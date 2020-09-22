@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import {fetchContext} from '../../fetchContext'
+import {fetchContext} from '../../fetchContext';
 import OrganizationSliderList from "./OrganizationSliderList";
 
 // https://www.npmjs.com/package/react-slick
